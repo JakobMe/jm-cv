@@ -22,8 +22,8 @@ html {
 .body {
     margin: 0;
     padding: 0;
-    background: url("../img/layout/header.png") top left no-repeat @color-header;
-    background-size: 100% auto;
+    background: url("../img/layout/header.png") top center no-repeat @color-header;
+    background-size: @width-header auto;
     background-attachment: fixed;
     font-size: @font-size-medium;
     color: @color-text-dark;
@@ -31,6 +31,7 @@ html {
 
     // Responsive
     @media @responsive-mobile {
+        background-position: top left;
         background-size: 300% auto;
     }
 }
