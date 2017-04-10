@@ -1,0 +1,21 @@
+{
+  "name": "jm-cv",
+  "version": "1.0.0",
+  "description": "Jakob Metzger Online-Bewerbung",
+  "author": "Jakob Metzger",
+  "license": "MIT",
+  "private": true,
+  "homepage": "https://github.com/JakobMe/jm-cv#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JakobMe/jm-cv.git"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-kit": "^0.3.0",
+    "gulp-less": "^3.1.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-util": "^3.0.7"
+  }
+}
