@@ -1,0 +1,85 @@
+/*
+ * Title-Datei.
+ * Definiert das Aussehen von Titeln.
+ * @author Jakob Metzger <jakob.me@gmail.com>
+ * @copyright 2017 Jakob Metzger
+ * @license MIT
+ */
+
+// Title
+.title {
+    position: relative;
+    font-weight: normal;
+    line-height: 1;
+    color: @color-primary;
+    margin: 0 0 @gap-big 0;
+    font-size: @font-size-giant;
+    text-transform: uppercase;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    // Sub
+    &--sub {
+        position: relative;
+        font-size: @font-size-huge;
+        color: @color-text-dark;
+        padding: 0 @gap-medium;
+        padding-bottom: @gap-small;
+        border-bottom: @gap-micro solid @color-pale;
+
+        // After & Before
+        &:after, &:before {
+            top: 100%;
+            left: @gap-big + @gap-small;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+        }
+
+        // After
+        &:after {
+            border-color: fade(@color-pale, 0%);
+            border-top-color: @color-content;
+            border-width: @gap-medium;
+            margin-left: -(@gap-medium);
+        }
+
+        // Before
+        &:before {
+            border-color: fade(@color-pale, 0%);
+            border-top-color: @color-pale;
+            border-width: @gap-medium + 3px;
+            margin-left: -(@gap-medium + 3px);
+        }
+    }
+
+    // Icon
+    &__icon {
+        display: inline-block;
+        text-align: center;
+        position: relative;
+        z-index: 100;
+        margin: 0 @gap-small 0 0;
+        background: @color-text-dark;
+        color: @color-text-light;
+        width: @gap-large;
+        height: @gap-large;
+        line-height: @gap-large;
+        font-size: @font-size-big;
+        border-radius: 50%;
+        vertical-align: middle;
+    }
+
+    // Text
+    &__text {
+        position: relative;
+        display: inline-block;
+        z-index: 100;
+        font-weight: 900;
+        line-height: @gap-large;
+        vertical-align: middle;
+    }
+}

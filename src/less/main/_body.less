@@ -22,7 +22,7 @@ html {
 .body {
     margin: 0;
     padding: 0;
-    background: url("../img/layout/header.jpg") top center no-repeat @color-header;
+    background: url("../img/layout/body.jpg") top center no-repeat @color-background;
     background-size: @width-header auto;
     background-attachment: fixed;
     font-size: @font-size-medium;
@@ -33,10 +33,11 @@ html {
     @media @responsive-mobile {
         background-position: top left;
         background-size: 300% auto;
+        background-attachment: scroll;
     }
 
     // Retina
     @media @responsive-retina {
-        background-image: url("../img/layout/header@2x.jpg");
+        background-image: url("../img/layout/body@2x.jpg");
     }
 }

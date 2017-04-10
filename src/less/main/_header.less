@@ -15,7 +15,7 @@
     color: @color-text-light;
     font-size: @font-size-big;
     text-shadow: 0 @gap-micro 0 fade(@color-shadow, 25%);
-    box-shadow: inset 0 -(@gap-big) @gap-big -(@gap-big) fade(@color-shadow, 25%);
+    box-shadow: inset 0 -(@gap-large) @gap-large -(@gap-large) fade(@color-shadow, 50%);
 
     // Responsive
     @media @responsive-mobile {
@@ -24,7 +24,7 @@
 
     // Title
     &__title {
-        font-weight: bold;
+        font-weight: 900;
         line-height: 1;
         font-size: @font-size-giant;
         text-transform: uppercase;
@@ -34,6 +34,7 @@
     // Subtitle
     &__subtitle {
         font-style: italic;
+        font-weight: normal;
         font-size: @font-size-huge;
         margin: 0 0 @gap-big 0;
     }

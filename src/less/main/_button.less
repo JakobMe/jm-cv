@@ -18,7 +18,7 @@
     height: @height-button;
     font-size: @font-size-medium;
     line-height: @height-button - @gap-micro;
-    font-weight: bold;
+    font-weight: 900;
     color: @color-text-dark;
     border-radius: (@gap-big + @gap-small * 2 + @gap-micro * 2);
     transition: all 0.3s;
@@ -40,11 +40,15 @@
     &--dark {
         border-color: @color-text-light;
         color: @color-text-light;
-        background: fade(@color-text-dark, 50%);
+        background: fade(@color-shadow, 25%);
+        box-shadow: 0 @gap-micro 0 fade(@color-shadow, 25%);
     }
 
     // Icon
-    &__icon { margin-right: @gap-tiny; }
+    &__icon {
+        margin-right: @gap-tiny;
+        font-weight: normal;
+    }
 
     // Hover
     &:hover {
