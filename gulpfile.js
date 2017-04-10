@@ -3,6 +3,7 @@ var gulp = require("gulp");
 var less = require("gulp-less");
 var cssmin = require("gulp-cssmin");
 var notify = require("gulp-notify");
+var imagemin = require("gulp-imagemin");
 
 // Default-Task
 gulp.task("default", ["watch"]);
@@ -11,6 +12,7 @@ gulp.task("default", ["watch"]);
 gulp.task("watch", function() {
     gulp.watch("src/less/**/*.less", ["less"]);
     gulp.watch("src/*.html", ["html"]);
+    gulp.watch("www/img/layout/*", ["image"]);
 });
 
 // LESS-Task
@@ -34,6 +36,19 @@ gulp.task("less", function() {
             icon: "Terminal Icon",
             title: "Gulp (LESS)",
             message: "www/css/<%= file.relative %> kompiliert.",
+        }));
+});
+
+// Image-Task
+gulp.task("image", function() {
+    return gulp.src("www/img/layout/*")
+        .pipe(imagemin())
+        .pipe(gulp.dest("www/img/layout"))
+        .pipe(notify({
+            sound: false,
+            icon: "Terminal Icon",
+            title: "Image",
+            message: "www/img/layout/<%= file.relative %> optimiert.",
         }));
 });
 
