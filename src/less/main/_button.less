@@ -1,0 +1,62 @@
+/*
+ * Button-Datei.
+ * Definiert das Aussehen von Buttons.
+ * @author Jakob Metzger <jakob.me@gmail.com>
+ * @copyright 2017 Jakob Metzger
+ * @license MIT
+ */
+
+// Button
+.button {
+    display: inline-block;
+    box-sizing: content-box;
+    background: transparent;
+    text-decoration: none;
+    text-align: center;
+    padding: @gap-small @gap-medium;
+    border: @gap-micro solid @color-text-dark;
+    height: @height-button;
+    font-size: @font-size-medium;
+    line-height: @height-button - @gap-micro;
+    font-weight: bold;
+    color: @color-text-dark;
+    border-radius: (@gap-big + @gap-small * 2 + @gap-micro * 2);
+    transition: all 0.3s;
+
+    // Abstand
+    &:not(:last-child) { margin: 0 @gap-small @gap-small 0; }
+
+    // Responsive
+    @media @responsive-mobile {
+        display: block;
+
+        // Abstand
+        &:not(:last-child) {
+            margin: 0 0 @gap-medium 0;
+        }
+    }
+
+    // Dark
+    &--dark {
+        border-color: @color-text-light;
+        color: @color-text-light;
+        background: fade(@color-text-dark, 50%);
+    }
+
+    // Icon
+    &__icon { margin-right: @gap-tiny; }
+
+    // Hover
+    &:hover {
+        color: @color-text-light;
+        border-color: @color-primary;
+        background: @color-primary;
+    }
+
+    // Active
+    &:active {
+        color: @color-text-light;
+        border-color: darken(@color-primary, 10%);
+        background: darken(@color-primary, 10%);
+    }
+}

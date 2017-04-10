@@ -1,0 +1,52 @@
+/*
+ * Portrait-Datei.
+ * Definiert das Aussehen des Portraits.
+ * @author Jakob Metzger <jakob.me@gmail.com>
+ * @copyright 2017 Jakob Metzger
+ * @license MIT
+ */
+
+// Portrait
+.portrait {
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    height: 0;
+    width: 100%;
+    padding-bottom: 100%;
+    border: @color-text-light solid @gap-micro;
+    border-radius: 50%;
+    background: @color-shadow;
+    box-shadow: 0 @gap-small @gap-medium fade(@color-shadow, 20%);
+
+    // Responsive
+    @media @responsive-mobile {
+        margin-bottom: @gap-big;
+    }
+
+    // Logo
+    &:after {
+        display: block;
+        position: absolute;
+        content: "";
+        width: 20%;
+        height: 20%;
+        right: 5%;
+        bottom: 5%;
+        background: url("../img/layout/logo.svg") center center no-repeat @color-primary;
+        background-size: cover;
+        box-shadow: 0 @gap-small @gap-medium fade(@color-shadow, 20%);
+        border-radius: 50%;
+    }
+
+    // Image
+    &__image {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+}

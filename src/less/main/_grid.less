@@ -1,0 +1,93 @@
+/*
+ * Grid-Datei.
+ * Definiert das Aussehen von Grids.
+ * @author Jakob Metzger <jakob.me@gmail.com>
+ * @copyright 2017 Jakob Metzger
+ * @license MIT
+ */
+
+// Grid
+.grid {
+    clear: both;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 auto;
+    max-width: @width-grid;
+
+    // Row
+    &__row {
+        clear: both;
+        display: block;
+        width: 100%;
+        padding: 0 @gap-medium;
+        margin: 0 -(@gap-medium);
+
+        // Table
+        &--table {
+            display: table;
+
+            // Responsive
+            @media @responsive-mobile {
+                display: block;
+            }
+        }
+
+        // Responsive
+        @media @responsive-mobile {
+            margin: 0;
+            padding: 0;
+        }
+
+        // Clear
+        &:after {
+            clear: both;
+            display: block;
+            content: "";
+        }
+    }
+
+    // Col
+    &__col {
+        float: left;
+        box-sizing: border-box;
+        padding: 0 @gap-medium;
+
+        // Table
+        &--table {
+            float: none;
+            display: table-cell;
+            vertical-align: middle;
+
+            // Responsive
+            @media @responsive-mobile {
+                display: block;
+            }
+        }
+
+        // Sizes
+        &--1  { width: (1/12)  * 100%; }
+        &--2  { width: (2/12)  * 100%; }
+        &--3  { width: (3/12)  * 100%; }
+        &--4  { width: (4/12)  * 100%; }
+        &--5  { width: (5/12)  * 100%; }
+        &--6  { width: (6/12)  * 100%; }
+        &--7  { width: (7/12)  * 100%; }
+        &--8  { width: (8/12)  * 100%; }
+        &--9  { width: (9/12)  * 100%; }
+        &--10 { width: (10/12) * 100%; }
+        &--11 { width: (11/12) * 100%; }
+        &--12 { width: (12/12) * 100%; }
+
+        // Responsive
+        @media @responsive-mobile {
+            float: none;
+
+            // Sizes
+            &--1, &--2, &--3, &--4, &--5, &--6, &--7,
+            &--8, &--9, &--10, &--11, &--12 {
+                width: 100%;
+            }
+        }
+    }
+}

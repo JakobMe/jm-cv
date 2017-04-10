@@ -1,0 +1,40 @@
+/*
+ * Iconlist-Datei.
+ * Definiert das Aussehen von Icon-Lists.
+ * @author Jakob Metzger <jakob.me@gmail.com>
+ * @copyright 2017 Jakob Metzger
+ * @license MIT
+ */
+
+// Iconlist
+.iconlist {
+    margin: 0;
+    padding: 0;
+    font-size: @font-size-small;
+    list-style-type: none;
+
+    // Item
+    &__item {
+        position: relative;
+        padding-left: @gap-big;
+        line-height: 1.5;
+
+        &:not(:last-child) { margin-bottom: @gap-medium; }
+
+        //
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            text-align: center;
+            top: 0;
+            left: 0;
+            width: @gap-big;
+            font-family: "FontAwesome";
+        }
+
+        &--home:before { content: @fa-var-home; }
+        &--mail:before { content: @fa-var-envelope; }
+        &--phone:before { content: @fa-var-phone; }
+    }
+}

@@ -1,0 +1,40 @@
+/*
+ * Header-Datei.
+ * Definiert das Aussehen des Headers.
+ * @author Jakob Metzger <jakob.me@gmail.com>
+ * @copyright 2017 Jakob Metzger
+ * @license MIT
+ */
+
+// Header
+.header {
+    overflow: hidden;
+    background: transparent;
+    padding: 5vw 0;
+    text-align: center;
+    color: @color-text-light;
+    font-size: @font-size-big;
+    text-shadow: 0 @gap-micro 0 fade(@color-shadow, 25%);
+    box-shadow: inset 0 -(@gap-big) @gap-big -(@gap-big) fade(@color-shadow, 25%);
+
+    // Responsive
+    @media @responsive-mobile {
+        padding: @gap-big @gap-medium;
+    }
+
+    // Title
+    &__title {
+        font-weight: bold;
+        line-height: 1;
+        font-size: @font-size-giant;
+        text-transform: uppercase;
+        margin: @gap-small 0 @gap-medium 0;
+    }
+
+    // Subtitle
+    &__subtitle {
+        font-style: italic;
+        font-size: @font-size-huge;
+        margin: 0 0 @gap-big 0;
+    }
+}
