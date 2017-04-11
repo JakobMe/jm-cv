@@ -18,12 +18,16 @@
 
     // Abschnitt
     &__section {
-        margin-bottom: @gap-huge;
+
+        // Abstand
+        &:not(:last-child) { margin-bottom: @gap-huge; }
 
         // Responsive
         @media @responsive-mobile {
             margin: 0 -(@gap-medium);
-            margin-bottom: @gap-big;
+
+            // Abstand
+            &:not(:last-child) { margin-bottom: @gap-big; }
         }
     }
 
