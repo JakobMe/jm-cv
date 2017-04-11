@@ -63,6 +63,24 @@
         time {
             color: darken(@color-pale, 5%);
         }
+
+        // Markierung
+        mark {
+            font-weight: 900;
+            display: inline-block;
+            font-size: @font-size-small;
+            white-space: nowrap;
+            padding: @gap-tiny;
+            vertical-align: 3px;
+            color: fade(@color-text-dark, 40%);
+            background: fade(@color-pale, 70%);
+            border-radius: @gap-tiny;
+
+            // Responsive
+            @media @responsive-mobile {
+                vertical-align: 2px;
+            }
+        }
     }
 
     // Row
