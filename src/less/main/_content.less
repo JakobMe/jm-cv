@@ -1,12 +1,12 @@
 /*
- * Resume-Datei.
- * Definiert das Aussehen des Resumes.
+ * Content-Datei.
+ * Definiert das Aussehen des Hauptinhalts.
  * @author Jakob Metzger <jakob.me@gmail.com>
  * @copyright 2017 Jakob Metzger
  * @license MIT
  */
 
-// Resume
+// Content
 .content {
     height: 1000px;
     padding: @gap-huge 0;
@@ -26,13 +26,13 @@
         }
     }
 
-    // Table
+    // Tabelle
     &__table {
         display: table;
         list-style-type: none;
         margin: 0;
         padding: 0;
-        font-weight: normal;
+        font-weight: @font-weight-normal;
         font-size: @font-size-big;
         box-sizing: border-box;
         border-left: @gap-micro solid @color-pale;
@@ -43,47 +43,9 @@
         @media @responsive-mobile {
             display: block;
         }
-
-        // Titel
-        em {
-            font-weight: 900;
-            margin: 0;
-            padding: 0;
-            font-style: normal;
-            text-transform: uppercase;
-            color: @color-primary;
-        }
-
-        // Fett
-        strong {
-            font-weight: 900;
-        }
-
-        // Zeit
-        time {
-            color: darken(@color-pale, 5%);
-        }
-
-        // Markierung
-        mark {
-            font-weight: 900;
-            display: inline-block;
-            font-size: @font-size-small;
-            white-space: nowrap;
-            padding: @gap-tiny;
-            vertical-align: 3px;
-            color: fade(@color-text-dark, 40%);
-            background: fade(@color-pale, 70%);
-            border-radius: @gap-tiny;
-
-            // Responsive
-            @media @responsive-mobile {
-                vertical-align: 2px;
-            }
-        }
     }
 
-    // Row
+    // Zeile
     &__row {
         display: table-row;
 
@@ -93,9 +55,10 @@
         }
     }
 
-    // Col
+    // Spalte
     &__col {
         margin: 0;
+        position: relative;
         box-sizing: border-box;
         display: table-cell;
         vertical-align: middle;
@@ -109,11 +72,10 @@
             &:not(:first-child) { padding-top: 0; }
         }
 
-        // Erstes
+        // Erste Spalte
         &:first-child {
-            position: relative;
 
-            // Kreis
+            // Kreis Links
             &:before {
                 content: "";
                 display: block;
@@ -129,23 +91,42 @@
                 border: @gap-micro solid @color-pale;
                 transform: translate3d(-50%, -50%, 0);
             }
+        }
 
-            // Pfeil
-            &:after {
-                font-family: "FontAwesome";
-                content: @fa-var-angle-right;
-                display: block;
+        // Folgende Spalten
+        &:not(:first-child) {
+
+            // Dreieck
+            &:after, &:before {
+                content: " ";
                 position: absolute;
-                right: 0;
+                pointer-events: none;
+                border: solid transparent;
                 top: 50%;
-                font-size: @font-size-large;
-                color: @color-pale;
-                transform: translate3d(50%, -50%, 0);
+                left: 0;
+                width: 0;
+                height: 0;
 
                 // Responsive
                 @media @responsive-mobile {
                     display: none;
                 }
+            }
+
+            // Dreieck
+            &:after {
+                border-color: fade(@color-pale, 0%);
+                border-left-color: @color-content;
+                border-width: @gap-small;
+                margin-top: -(@gap-small);
+            }
+
+            // Dreieck
+            &:before {
+                border-color: fade(@color-pale, 0%);
+                border-left-color: @color-pale;
+                border-width: @gap-small + @gap-triangle;
+                margin-top: -(@gap-small + @gap-triangle);
             }
         }
 
@@ -159,5 +140,5 @@
 .info {
     background: @color-primary;
     height: 200px;
-    box-shadow: inset 0 -(@gap-large) @gap-large -(@gap-large) fade(@color-shadow, 25%);
+    .shadow-inner(25%);
 }

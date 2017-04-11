@@ -12,7 +12,7 @@ gulp.task("default", ["watch"]);
 gulp.task("watch", function() {
     gulp.watch("src/less/**/*.less", ["less"]);
     gulp.watch("src/*.html", ["html"]);
-    gulp.watch("www/img/layout/*", ["image"]);
+    gulp.watch("src/img/**/*", ["image"]);
 });
 
 // LESS-Task
@@ -41,9 +41,9 @@ gulp.task("less", function() {
 
 // Image-Task
 gulp.task("image", function() {
-    return gulp.src("www/img/layout/*")
+    return gulp.src("src/img/**/*")
         .pipe(imagemin())
-        .pipe(gulp.dest("www/img/layout"))
+        .pipe(gulp.dest("www/img/"))
         .pipe(notify({
             sound: false,
             icon: "Terminal Icon",

@@ -1,0 +1,40 @@
+/*
+ * Base-Datei.
+ * Definiert grundlegende globale Stile.
+ * @author Jakob Metzger <jakob.me@gmail.com>
+ * @copyright 2017 Jakob Metzger
+ * @license MIT
+ */
+
+ // Titel
+ em {
+     font-weight: @font-weight-bold;
+     margin: 0;
+     padding: 0;
+     font-style: normal;
+     text-transform: uppercase;
+     color: @color-primary;
+ }
+
+ // Fett
+ strong {
+     font-weight: @font-weight-bold;
+ }
+
+ // Zeit
+ time {
+     color: darken(@color-pale, 5%);
+ }
+
+ // Markierung
+ mark {
+     font-style: italic;
+     display: inline-block;
+     font-size: @font-size-small;
+     white-space: nowrap;
+     padding: @gap-micro @gap-tiny;
+     vertical-align: @gap-micro;
+     color: darken(@color-highlight, 40%);
+     background: @color-highlight;
+     border-radius: @gap-tiny;
+ }

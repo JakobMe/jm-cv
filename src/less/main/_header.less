@@ -11,11 +11,12 @@
     overflow: hidden;
     background: transparent;
     padding: 5vw 0;
+    line-height: 1;
     text-align: center;
     color: @color-text-light;
     font-size: @font-size-big;
     text-shadow: 0 @gap-micro 0 fade(@color-shadow, 25%);
-    box-shadow: inset 0 -(@gap-large) @gap-large -(@gap-large) fade(@color-shadow, 50%);
+    .shadow-inner(50%);
 
     // Responsive
     @media @responsive-mobile {
@@ -24,8 +25,7 @@
 
     // Title
     &__title {
-        font-weight: 900;
-        line-height: 1;
+        font-weight: @font-weight-bold;
         font-size: @font-size-giant;
         text-transform: uppercase;
         margin: @gap-small 0 @gap-medium 0;
@@ -34,7 +34,7 @@
     // Subtitle
     &__subtitle {
         font-style: italic;
-        font-weight: normal;
+        font-weight: @font-weight-normal;
         font-size: @font-size-huge;
         margin: 0 0 @gap-big 0;
     }

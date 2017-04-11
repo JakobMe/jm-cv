@@ -9,7 +9,7 @@
 // Title
 .title {
     position: relative;
-    font-weight: normal;
+    font-weight: @font-weight-normal;
     line-height: 1;
     color: @color-primary;
     margin: 0 0 @gap-big 0;
@@ -51,8 +51,8 @@
         &:before {
             border-color: fade(@color-pale, 0%);
             border-top-color: @color-pale;
-            border-width: @gap-medium + 3px;
-            margin-left: -(@gap-medium + 3px);
+            border-width: @gap-medium + @gap-triangle;
+            margin-left: -(@gap-medium + @gap-triangle);
         }
     }
 
@@ -78,7 +78,7 @@
         position: relative;
         display: inline-block;
         z-index: 100;
-        font-weight: 900;
+        font-weight: @font-weight-bold;
         line-height: @gap-large;
         vertical-align: middle;
     }

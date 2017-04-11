@@ -1,0 +1,18 @@
+/*
+ * Mixins-Datei.
+ * Definiert globale Mixins.
+ * @author Jakob Metzger <jakob.me@gmail.com>
+ * @copyright 2017 Jakob Metzger
+ * @license MIT
+ */
+
+// Icon Pseudoelement
+.icon(@icon) {
+    font-family: @font-icon;
+    content: @icon;
+}
+
+// Schatten Innen
+.shadow-inner(@fade) {
+    box-shadow: inset 0 -(@gap-large) @gap-large -(@gap-large) fade(@color-shadow, @fade);
+}
