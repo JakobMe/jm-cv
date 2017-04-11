@@ -18,14 +18,23 @@
     text-overflow: ellipsis;
     white-space: nowrap;
 
+    // Responsive
+    @media @responsive-mobile {
+        font-size: @font-size-huge;
+    }
+
     // Sub
     &--sub {
         position: relative;
-        font-size: @font-size-huge;
+        font-size: @font-size-larger;
         color: @color-text-dark;
-        padding: 0 @gap-medium;
-        padding-bottom: @gap-small;
+        padding: @gap-small @gap-medium;
         border-bottom: @gap-micro solid @color-pale;
+
+        // Responsive
+        @media @responsive-mobile {
+            font-size: @font-size-large;
+        }
 
         // After & Before
         &:after, &:before {

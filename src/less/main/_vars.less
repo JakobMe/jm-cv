@@ -19,6 +19,8 @@
 // Breiten
 @width-grid:                   1024px;
 @width-background:             1280px;
+@width-mobile:                 512px;
+@width-desktop:                513px;
 
 // Höhen
 @height-button:                24px;
@@ -59,6 +61,7 @@
 @path-content:                 "../img/content/";
 
 // Media-Queries
-@responsive-mobile:            ~"(max-width: 512px)";
-@responsive-desktop:           ~"(min-width: 1024px)";
+@responsive-mobile:            ~"(max-width: @{width-mobile})";
+@responsive-desktop:           ~"(min-width: @{width-desktop})";
+@responsive-grid:              ~"(max-width: @{width-grid})";
 @responsive-retina:            ~"(-webkit-min-device-pixel-ratio: 2), (min-resolution: 144dpi)";

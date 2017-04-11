@@ -8,7 +8,6 @@
 
 // Content
 .content {
-    height: 1000px;
     padding: @gap-huge 0;
     background: @color-content;
 
@@ -19,10 +18,12 @@
 
     // Abschnitt
     &__section {
+        margin-bottom: @gap-huge;
 
         // Responsive
         @media @responsive-mobile {
             margin: 0 -(@gap-medium);
+            margin-bottom: @gap-big;
         }
     }
 
@@ -66,6 +67,7 @@
 
         // Responsive
         @media @responsive-mobile {
+            width: auto;
             padding-right: @gap-medium;
 
             // Abstand
@@ -74,6 +76,12 @@
 
         // Erste Spalte
         &:first-child {
+            width: 25vw;
+
+            // Responsive
+            @media @responsive-mobile {
+                width: auto;
+            }
 
             // Kreis Links
             &:before {
