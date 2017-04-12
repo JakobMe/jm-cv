@@ -37,6 +37,9 @@
         border-radius: 50%;
         vertical-align: middle;
         .shadow-text(10%);
+
+        // Font-Awesome Icon
+        .fa { vertical-align: @gap-hairline; }
     }
 
     // Text
@@ -69,11 +72,8 @@
         color: @color-text-dark;
         padding: @gap-small @gap-medium;
         border-bottom: @gap-micro solid @color-pale;
-
-        // Responsive
-        @media @responsive-mobile {
-            border-top: @gap-micro solid @color-pale;
-        }
+        border-top: @gap-micro solid @color-pale;
+        margin-bottom: @gap-medium;
 
         // After & Before
         &:after, &:before {

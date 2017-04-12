@@ -35,12 +35,11 @@ html {
     font-family: @font-main, sans-serif;
 
     // Textauswahl
-    ::-moz-selection { background: fade(@color-primary, 50%); }
-    ::selection { background: fade(@color-primary, 50%); }
+    ::-moz-selection { background: fade(lighten(@color-primary, 20%), 50%); }
+    ::selection { background: fade(lighten(@color-primary, 20%), 50%); }
 
     // Responsive
     @media @responsive-mobile {
-        background-position: top left;
         background-attachment: scroll;
     }
 

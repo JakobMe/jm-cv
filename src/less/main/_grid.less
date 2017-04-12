@@ -15,6 +15,17 @@
     margin: 0 auto;
     max-width: @width-grid;
 
+    // Table
+    &--table {
+        -webkit-overflow-scrolling: touch;
+        overflow-x: auto;
+
+        // Responsive
+        @media @responsive-mobile {
+            overflow-x: visible;
+        }
+    }
+
     // Row
     &__row {
         clear: both;

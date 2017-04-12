@@ -22,13 +22,15 @@
     color: @color-text-dark;
     border-radius: (@gap-big + @gap-small * 2 + @gap-micro * 2);
     transition: all 0.3s;
+    margin: 0 @gap-tiny;
 
     // Abstand
-    &:not(:last-child) { margin: 0 @gap-small @gap-small 0; }
+    &:not(:last-child) { margin-bottom: @gap-small; }
 
     // Responsive
     @media @responsive-mobile {
         display: block;
+        margin: 0;
 
         // Abstand
         &:not(:last-child) {
@@ -41,7 +43,8 @@
         border-color: @color-text-light;
         color: @color-text-light;
         background: fade(@color-shadow, 25%);
-        box-shadow: 0 @gap-micro 0 fade(@color-shadow, 25%);
+        .shadow-frame();
+        .shadow-text();
     }
 
     // Icon
@@ -50,16 +53,21 @@
         font-weight: @font-weight-normal;
     }
 
+    // Hover & Active
+    &:hover, &:active {
+        color: @color-text-light;
+        .shadow-flat();
+        .shadow-text(10%);
+    }
+
     // Hover
     &:hover {
-        color: @color-text-light;
         border-color: @color-primary;
         background: @color-primary;
     }
 
     // Active
     &:active {
-        color: @color-text-light;
         border-color: darken(@color-primary, 10%);
         background: darken(@color-primary, 10%);
     }

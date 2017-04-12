@@ -8,7 +8,7 @@
 
 // Content
 .content {
-    padding: @gap-huge 0;
+    padding: 5vw 0;
     background: @color-content;
 
     // Responsive
@@ -18,25 +18,7 @@
 
     // Artikel
     &__article {
-
-        // Responsive
-        @media @responsive-mobile {
-            margin: 0 -(@gap-medium);
-        }
-    }
-
-    // Abschnitt
-    &__section {
-
-        // Abstand
-        &:not(:last-child) { margin-bottom: @gap-medium; }
-
-        // Responsive
-        @media @responsive-mobile {
-
-            // Abstand
-            &:not(:last-child) { margin-bottom: 0; }
-        }
+        margin: 0 -(@gap-medium);
     }
 
     // Tabelle
@@ -44,18 +26,16 @@
         display: table;
         list-style-type: none;
         margin: 0;
-        padding: 0;
+        padding: 0 0 @gap-medium @gap-small;
         font-weight: @font-weight-normal;
         font-size: @font-size-big;
         box-sizing: border-box;
         border-left: @gap-micro solid @color-pale;
         margin-left: @gap-big + @gap-small - (@gap-micro / 2);
-        padding-left: @gap-small;
 
         // Responsive
         @media @responsive-mobile {
             display: block;
-            padding-bottom: @gap-medium;
         }
     }
 
@@ -156,10 +136,4 @@
             display: block;
         }
     }
-}
-
-.info {
-    background: @color-primary;
-    height: 200px;
-    .shadow-inner(25%);
 }
