@@ -15,12 +15,12 @@
     text-align: center;
     color: @color-text-light;
     font-size: @font-size-big;
-    text-shadow: 0 @gap-micro 0 fade(@color-shadow, 25%);
     .shadow-inner(50%);
+    .shadow-text();
 
     // Responsive
     @media @responsive-mobile {
-        padding: @gap-big @gap-medium;
+        padding: @gap-medium 0;
     }
 
     // Title

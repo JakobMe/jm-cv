@@ -21,3 +21,8 @@
 .shadow-inner(@fade: 25%) {
     box-shadow: inset 0 -(@gap-large) @gap-large -(@gap-large) fade(@color-shadow, @fade);
 }
+
+// Schatten Text
+.shadow-text(@fade: 25%) {
+    text-shadow: 0 @gap-micro 0 fade(@color-shadow, @fade);
+}

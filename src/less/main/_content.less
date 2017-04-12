@@ -16,18 +16,26 @@
         padding: @gap-medium 0;
     }
 
-    // Abschnitt
-    &__section {
-
-        // Abstand
-        &:not(:last-child) { margin-bottom: @gap-huge; }
+    // Artikel
+    &__article {
 
         // Responsive
         @media @responsive-mobile {
             margin: 0 -(@gap-medium);
+        }
+    }
+
+    // Abschnitt
+    &__section {
+
+        // Abstand
+        &:not(:last-child) { margin-bottom: @gap-medium; }
+
+        // Responsive
+        @media @responsive-mobile {
 
             // Abstand
-            &:not(:last-child) { margin-bottom: @gap-big; }
+            &:not(:last-child) { margin-bottom: 0; }
         }
     }
 
@@ -47,6 +55,7 @@
         // Responsive
         @media @responsive-mobile {
             display: block;
+            padding-bottom: @gap-medium;
         }
     }
 
