@@ -10,14 +10,9 @@
 .portrait {
     display: block;
     position: relative;
-    box-sizing: border-box;
     height: 0;
     width: 100%;
     padding-bottom: 100%;
-    border: @color-text-light solid @gap-micro;
-    border-radius: 50%;
-    background: @color-shadow;
-    box-shadow: 0 @gap-small @gap-medium fade(@color-shadow, 20%);
 
     // Responsive
     @media @responsive-mobile {
@@ -33,20 +28,35 @@
         height: 20%;
         right: 5%;
         bottom: 5%;
-        background: url("@{path-layout}logo.svg") center center no-repeat @color-primary;
+        background-color: @color-primary;
+        background-image: url("@{path-layout}logo.svg");
+        background-position: center center;
+        background-repeat: no-repeat;
         background-size: cover;
-        box-shadow: 0 @gap-small @gap-medium fade(@color-shadow, 20%);
         border-radius: 50%;
+        .shadow-drop();
     }
 
-    // Image
-    &__image {
+    // Rahmen
+    &__frame {
         display: block;
+        overflow: hidden;
         position: absolute;
+        box-sizing: border-box;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
+        border: @color-text-light solid @gap-micro;
+        background: @color-shadow;
         border-radius: 50%;
+        .shadow-drop();
+    }
+
+    // Bild
+    &__image {
+        display: block;
+        width: 100%;
+        height: 100%;
     }
 }

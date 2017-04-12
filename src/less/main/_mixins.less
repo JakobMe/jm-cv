@@ -12,7 +12,12 @@
     content: @icon;
 }
 
+// Schatten Außen
+.shadow-drop(@fade: 20%) {
+    box-shadow: 0 @gap-small @gap-medium fade(@color-shadow, @fade);
+}
+
 // Schatten Innen
-.shadow-inner(@fade) {
+.shadow-inner(@fade: 25%) {
     box-shadow: inset 0 -(@gap-large) @gap-large -(@gap-large) fade(@color-shadow, @fade);
 }
