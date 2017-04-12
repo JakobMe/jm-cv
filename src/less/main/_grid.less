@@ -16,7 +16,7 @@
     max-width: @width-grid;
 
     // Table
-    &--table {
+    &&--table {
         -webkit-overflow-scrolling: touch;
         overflow-x: auto;
 
@@ -33,7 +33,7 @@
         width: 100%;
 
         // Table
-        &--table {
+        &&--table {
             display: table;
 
             // Responsive
@@ -57,7 +57,7 @@
         padding: 0 @gap-medium;
 
         // Table
-        &--table {
+        &&--table {
             float: none;
             display: table-cell;
             vertical-align: middle;
@@ -69,28 +69,41 @@
         }
 
         // Sizes
-        &--1  { width: (1/12)  * 100%; }
-        &--2  { width: (2/12)  * 100%; }
-        &--3  { width: (3/12)  * 100%; }
-        &--4  { width: (4/12)  * 100%; }
-        &--5  { width: (5/12)  * 100%; }
-        &--6  { width: (6/12)  * 100%; }
-        &--7  { width: (7/12)  * 100%; }
-        &--8  { width: (8/12)  * 100%; }
-        &--9  { width: (9/12)  * 100%; }
-        &--10 { width: (10/12) * 100%; }
-        &--11 { width: (11/12) * 100%; }
-        &--12 { width: (12/12) * 100%; }
+        &&--1  { width: (1/12)  * 100%; }
+        &&--2  { width: (2/12)  * 100%; }
+        &&--3  { width: (3/12)  * 100%; }
+        &&--4  { width: (4/12)  * 100%; }
+        &&--5  { width: (5/12)  * 100%; }
+        &&--6  { width: (6/12)  * 100%; }
+        &&--7  { width: (7/12)  * 100%; }
+        &&--8  { width: (8/12)  * 100%; }
+        &&--9  { width: (9/12)  * 100%; }
+        &&--10 { width: (10/12) * 100%; }
+        &&--11 { width: (11/12) * 100%; }
+        &&--12 { width: (12/12) * 100%; }
+
+        // Medium
+        &&--md {
+            
+            // Responsive
+            @media @responsive-tablet {
+                float: none;
+                display: block;
+                width: 100% !important;
+
+                // Abstand
+                &:not(:last-child) { margin-bottom: @gap-medium; }
+            }
+        }
 
         // Responsive
         @media @responsive-mobile {
             float: none;
+            display: block;
+            width: 100% !important;
 
-            // Sizes
-            &--1, &--2, &--3, &--4, &--5, &--6, &--7,
-            &--8, &--9, &--10, &--11, &--12 {
-                width: 100%;
-            }
+            // Abstand
+            &:not(:last-child) { margin-bottom: @gap-medium; }
         }
     }
 }

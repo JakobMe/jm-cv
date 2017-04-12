@@ -21,6 +21,27 @@
         margin: 0 -(@gap-medium);
     }
 
+    // Abschnitt
+    &__section {
+        border-top: @gap-micro solid @color-pale;
+
+        // Letzter Abschnitt
+        &:last-child {
+            margin-bottom: @gap-big;
+            border-bottom: @gap-micro solid @color-pale;
+
+            // Responsive
+            @media @responsive-mobile {
+                margin-bottom: @gap-medium;
+            }
+        }
+    }
+
+    // Einzug
+    &__indent {
+        padding: 0 @gap-medium;
+    }
+
     // Tabelle
     &__table {
         display: table;

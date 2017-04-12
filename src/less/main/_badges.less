@@ -1,0 +1,34 @@
+/*
+ * Badges-Datei.
+ * Definiert das Aussehen von Badges.
+ * @author Jakob Metzger <jakob.me@gmail.com>
+ * @copyright 2017 Jakob Metzger
+ * @license MIT
+ */
+
+// Badges
+.badges {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    list-style-type: none;
+    margin-top: -(@gap-tiny);
+
+    // Item
+    &__item {
+        max-width: 100%;
+        display: inline-block;
+        box-sizing: border-box;
+        height: @gap-middle;
+        line-height: @gap-middle;
+        margin: @gap-tiny @gap-tiny 0 0;
+        padding: 0 @gap-small;
+        border-radius: (@gap-middle / 2);
+        background: @color-pale;
+        color: @color-text-dark;
+        font-size: @font-size-small;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

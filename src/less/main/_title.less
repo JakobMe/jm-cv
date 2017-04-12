@@ -66,14 +66,59 @@
         }
     }
 
-    // Sub
-    &--sub {
-        position: relative;
+    // Secondary
+    &&--secondary {
         color: @color-text-dark;
-        padding: @gap-small @gap-medium;
-        border-bottom: @gap-micro solid @color-pale;
-        border-top: @gap-micro solid @color-pale;
+        padding-top: @gap-small;
+        padding-bottom: @gap-small;
         margin-bottom: @gap-medium;
+        border-bottom: @gap-micro solid @color-pale;
+    }
+
+    // Secondary & Icon
+    &&--secondary  &__icon {
+        background: @color-text-dark;
+    }
+
+    // Secondary & Text
+    &&--secondary  &__text {
+        text-transform: none;
+        font-size: @font-size-huge;
+
+        // Responsive
+        @media @responsive-mobile {
+            font-size: @font-size-larger;
+        }
+    }
+
+    // Tertiary
+    &&--tertiary {
+        color: @color-text-dark;
+        margin-bottom: @gap-medium;
+    }
+
+    // Tertiary & Icon
+    &&--tertiary  &__icon {
+        color: @color-text-dark;
+        background: @color-pale;
+        text-shadow: none;
+    }
+
+    // Tertiary & Text
+    &&--tertiary  &__text {
+        text-transform: none;
+        font-size: @font-size-large;
+
+        // Responsive
+        @media @responsive-mobile {
+            font-size: @font-size-big;
+        }
+    }
+
+    // Arrow
+    &&--arrow {
+        position: relative;
+        padding-bottom: @gap-small;
 
         // After & Before
         &:after, &:before {
@@ -101,22 +146,6 @@
             border-top-color: @color-pale;
             border-width: @gap-medium + @gap-triangle;
             margin-left: -(@gap-medium + @gap-triangle);
-        }
-    }
-
-    // Sub & Icon
-    &--sub &__icon {
-        background: @color-text-dark;
-    }
-
-    // Sub & Text
-    &--sub &__text {
-        text-transform: none;
-        font-size: @font-size-huge;
-
-        // Responsive
-        @media @responsive-mobile {
-            font-size: @font-size-larger;
         }
     }
 }
