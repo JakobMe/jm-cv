@@ -42,6 +42,16 @@
             }
         }
 
+        // Flex
+        &&--flex {
+            display: flex;
+
+            // Responsive
+            @media @responsive-small {
+                display: block;
+            }
+        }
+
         // Medium
         &&--md {
 
@@ -77,6 +87,17 @@
             }
         }
 
+        // Flex
+        &&--flex {
+            float: none;
+            display: flex;
+
+            // Responsive
+            @media @responsive-small {
+                display: block;
+            }
+        }
+
         // Sizes
         &&--1  { width: (1/12)  * 100%; }
         &&--2  { width: (2/12)  * 100%; }
@@ -99,9 +120,6 @@
                 float: none;
                 display: block;
                 width: 100% !important;
-
-                // Abstand
-                &:not(:last-child) { margin-bottom: @gap-medium; }
             }
         }
 
@@ -110,9 +128,6 @@
             float: none;
             display: block;
             width: 100% !important;
-
-            // Abstand
-            &:not(:last-child) { margin-bottom: @gap-medium; }
         }
     }
 }

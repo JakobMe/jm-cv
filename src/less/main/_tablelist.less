@@ -10,13 +10,12 @@
 .tablelist {
     display: table;
     list-style-type: none;
-    margin: 0;
-    padding: 0 0 @gap-medium @gap-small;
-    font-weight: @font-weight-normal;
-    font-size: @font-size-big;
     box-sizing: border-box;
-    border-left: @gap-micro solid @color-pale;
-    margin-left: @gap-big + @gap-small - (@gap-micro / 2);
+    font-size: @font-size-big;
+    font-weight: @font-weight-normal;
+    border-left: @gap-micro dotted @color-pale;
+    padding: 0 0 @gap-medium @gap-small;
+    margin: 0 0 0 @gap-big + @gap-small - (@gap-micro / 2);
 
     // Responsive
     @media @responsive-small {

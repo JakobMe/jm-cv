@@ -12,37 +12,14 @@
     position: relative;
     background: @color-content;
 
-    // Abschnitt
-    &__section {
-        padding-top: @gap-large;
-
-        // Letzter Abschnitt
-        &:last-child { padding-bottom: @gap-large; }
-
-        // Responsive
-        @media @responsive-medium {
-            padding-top: @gap-big;
-
-            // Letzter Abschnitt
-            &:last-child { padding-bottom: @gap-big; }
-        }
-
-        // Responsive
-        @media @responsive-small {
-
-            // Letzter Abschnitt
-            &:last-child { padding-bottom: 0; }
-        }
+    // Rahmen Oben
+    &__border-top {
+        border-top: @gap-micro solid @color-pale;
     }
 
-    // Box
-    &__box {
-        border-top: @gap-micro solid @color-pale;
-
-        // Letzte Box
-        &&--last {
-            border-bottom: @gap-micro solid @color-pale;
-        }
+    // Rahmen Unten
+    &__border-bottom {
+        border-bottom: @gap-micro solid @color-pale;
     }
 
     // Erweitern
@@ -53,5 +30,54 @@
     // Einzug
     &__indent {
         padding: 0 @gap-medium;
+    }
+
+    // Trenner
+    &__divider {
+        border: none;
+        display: block;
+        position: relative;
+        padding: 0;
+        margin: 0;
+        height: @gap-big;
+        background: repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent @gap-tiny,
+            @color-light @gap-tiny,
+            @color-light @gap-small
+        );
+
+        // Verlauf Links & Rechts
+        &:before, &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            width: 25%;
+            height: 100%;
+        }
+
+        // Verlauf Links
+        &:before {
+            left: 0;
+            .gradient(left, fade(@color-content, 0%), fade(@color-content, 100%));
+        }
+
+        // Verlauf Rechts
+        &:after {
+            right: 0;
+            .gradient(right, fade(@color-content, 0%), fade(@color-content, 100%));
+        }
+
+        // Responsive
+        @media @responsive-medium {
+            height: @gap-middle;
+        }
+
+        // Responsive
+        @media @responsive-small {
+            height: @gap-medium;
+        }
     }
 }

@@ -1,0 +1,32 @@
+/*
+ * Flex-Datei.
+ * Definiert das Aussehen von Flex-Boxen.
+ * @author Jakob Metzger <jakob.me@gmail.com>
+ * @copyright 2017 Jakob Metzger
+ * @license MIT
+ */
+
+// Flex
+.flex {
+    display: flex;
+    flex-direction: column;
+
+    // Medium
+    &&--md {
+
+        // Responsive
+        @media @responsive-medium {
+            display: block;
+        }
+    }
+
+    // Responsive
+    @media @responsive-small {
+        display: block;
+    }
+
+    // Grow
+    &__grow {
+        flex-grow: 1;
+    }
+}

@@ -9,17 +9,12 @@
 // Title
 .title {
     position: relative;
-    font-weight: @font-weight-normal;
-    line-height: 1;
-    color: @color-primary;
-    margin: 0 0 @gap-big 0;
-    padding: 0 @gap-medium;
+    margin: 0;
     font-size: 0;
-
-    // Responsive
-    @media @responsive-small {
-        margin-bottom: @gap-medium;
-    }
+    line-height: 1;
+    padding: 0 @gap-medium;
+    color: @color-primary;
+    font-weight: @font-weight-normal;
 
     // Icon
     &__icon {
@@ -104,30 +99,19 @@
     &&--tertiary  &__text {
         text-transform: none;
         font-size: @font-size-large;
-
-        // Responsive
-        @media @responsive-small {
-            font-size: @font-size-big;
-        }
     }
 
     // Mit Rahmen
     &&--border {
         padding-top: @gap-medium;
         padding-bottom: @gap-medium;
-        margin-bottom: @gap-medium;
         border-bottom: @gap-micro solid @color-pale;
-
-        // Responsive
-        @media @responsive-small {
-            padding-top: @gap-small;
-            padding-bottom: @gap-small;
-        }
     }
 
     // Mit Pfeil
     &&--arrow {
         position: relative;
+        margin-bottom: @gap-medium;
 
         // After & Before
         &:after, &:before {

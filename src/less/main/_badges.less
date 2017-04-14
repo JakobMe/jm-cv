@@ -8,11 +8,13 @@
 
 // Badges
 .badges {
-    margin: 0;
-    padding: 0;
     font-size: 0;
     list-style-type: none;
-    margin-top: -(@gap-tiny);
+    border-left: @gap-micro dotted @color-pale;
+    padding: @gap-medium;
+    padding-bottom: @gap-big;
+    padding-left: @gap-big + @gap-small;
+    margin: -(@gap-tiny) 0 0 @gap-big + @gap-small - (@gap-micro / 2);
 
     // Item
     &__item {
