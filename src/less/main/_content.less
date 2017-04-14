@@ -16,11 +16,6 @@
         padding: @gap-medium 0;
     }
 
-    // Artikel
-    &__article {
-        margin: 0 -(@gap-medium);
-    }
-
     // Abschnitt
     &__section {
         border-top: @gap-micro solid @color-pale;
@@ -37,124 +32,13 @@
         }
     }
 
+    // Erweitern
+    &__extend {
+        margin: 0 -(@gap-medium);
+    }
+
     // Einzug
     &__indent {
         padding: 0 @gap-medium;
-    }
-
-    // Tabelle
-    &__table {
-        display: table;
-        list-style-type: none;
-        margin: 0;
-        padding: 0 0 @gap-medium @gap-small;
-        font-weight: @font-weight-normal;
-        font-size: @font-size-big;
-        box-sizing: border-box;
-        border-left: @gap-micro solid @color-pale;
-        margin-left: @gap-big + @gap-small - (@gap-micro / 2);
-
-        // Responsive
-        @media @responsive-mobile {
-            display: block;
-        }
-    }
-
-    // Zeile
-    &__row {
-        display: table-row;
-
-        // Responsive
-        @media @responsive-mobile {
-            display: block;
-        }
-    }
-
-    // Spalte
-    &__col {
-        margin: 0;
-        position: relative;
-        box-sizing: border-box;
-        display: table-cell;
-        vertical-align: middle;
-        padding: @gap-medium @gap-big;
-
-        // Responsive
-        @media @responsive-mobile {
-            width: auto;
-            padding-right: @gap-medium;
-
-            // Abstand
-            &:not(:first-child) { padding-top: 0; }
-        }
-
-        // Erste Spalte
-        &:first-child {
-            width: 25vw;
-
-            // Responsive
-            @media @responsive-mobile {
-                width: auto;
-            }
-
-            // Kreis Links
-            &:before {
-                content: "";
-                display: block;
-                position: absolute;
-                left: -(@gap-small);
-                top: 50%;
-                box-sizing: border-box;
-                background: @color-content;
-                width: @gap-medium;
-                height: @gap-medium;
-                border-radius: 50%;
-                margin-left: -(@gap-micro / 2);
-                border: @gap-micro solid @color-pale;
-                transform: translate3d(-50%, -50%, 0);
-            }
-        }
-
-        // Folgende Spalten
-        &:not(:first-child) {
-
-            // Dreieck
-            &:after, &:before {
-                content: " ";
-                position: absolute;
-                pointer-events: none;
-                border: solid transparent;
-                top: 50%;
-                left: 0;
-                width: 0;
-                height: 0;
-
-                // Responsive
-                @media @responsive-mobile {
-                    display: none;
-                }
-            }
-
-            // Dreieck
-            &:after {
-                border-color: fade(@color-pale, 0%);
-                border-left-color: @color-content;
-                border-width: @gap-small;
-                margin-top: -(@gap-small);
-            }
-
-            // Dreieck
-            &:before {
-                border-color: fade(@color-pale, 0%);
-                border-left-color: @color-pale;
-                border-width: @gap-small + @gap-triangle;
-                margin-top: -(@gap-small + @gap-triangle);
-            }
-        }
-
-        // Responsive
-        @media @responsive-mobile {
-            display: block;
-        }
     }
 }
