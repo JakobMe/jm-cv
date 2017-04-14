@@ -12,6 +12,11 @@
     content: @icon;
 }
 
+// Verlauf
+.gradient(@direction: right, @first, @second) {
+    background-image: linear-gradient(to @direction, @first, @second);
+}
+
 // Schatten Außen
 .shadow-drop(@fade: 20%) {
     box-shadow: 0 @gap-small @gap-medium fade(@color-shadow, @fade);
@@ -40,4 +45,9 @@
 // Schatten Text
 .shadow-text(@fade: 25%) {
     text-shadow: 0 @gap-micro 0 fade(@color-shadow, @fade);
+}
+
+// Transition
+.transition(@property: all, @time: @transition-time, @delay: @transition-delay) {
+    transition: @property @time @delay;
 }

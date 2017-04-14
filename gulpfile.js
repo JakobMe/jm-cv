@@ -4,6 +4,7 @@ var less = require("gulp-less");
 var cssmin = require("gulp-cssmin");
 var notify = require("gulp-notify");
 var imagemin = require("gulp-imagemin");
+var autoprefixer = require("gulp-autoprefixer");
 
 // Default-Task
 gulp.task("default", ["watch"]);
@@ -28,7 +29,7 @@ gulp.task("less", function() {
             })(error);
             this.emit("end");
         })
-        .pipe(gulp.dest("www/css/"))
+        .pipe(autoprefixer())
         .pipe(cssmin({ advanced: false }))
         .pipe(gulp.dest("www/css/"))
         .pipe(notify({

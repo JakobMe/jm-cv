@@ -28,6 +28,7 @@
         <meta name="theme-color" content="#ffffff">
 
         <!-- Webapp-Einstellungen -->
+        <meta name="format-detection" content="telephone=no, date=no">
         <meta name="apple-mobile-web-app-capable" content="no">
         <meta name="viewport" content="width=device-width, height=device-height,
                                        initial-scale=1, user-scalable=no,
@@ -68,16 +69,19 @@
                         <p class="header__subtitle">
                             Frontend-Entwickler
                         </p>
-                        <a class="button button--dark" href="https://github.com/JakobMe"
-                           target="_blank" rel="nofollow noreferrer" title="Jakob Metzgers GitHub Profil">
-                            <i class="fa fa-github button__icon"></i>
-                            github.com/JakobMe
-                        </a>
-                        <a class="button button--dark" href="mailto:jakob.me@gmail.com"
-                           title="Jakob Metzger eine E-Mail schreiben">
-                            <i class="fa fa-envelope button__icon"></i>
-                            jakob.me@gmail.com
-                        </a>
+                        <p class="header__buttons">
+                            <a class="button button--dark" href="https://github.com/JakobMe"
+                               target="_blank" rel="nofollow noreferrer" title="Jakob Metzgers GitHub Profil">
+                                <i class="fa fa-github button__icon"></i>
+                                github.com/JakobMe
+                            </a>
+                            <br/>
+                            <a class="button button--dark" href="mailto:jakob.me@gmail.com"
+                               title="Jakob Metzger eine E-Mail schreiben">
+                                <i class="fa fa-envelope button__icon"></i>
+                                jakob.me@gmail.com
+                            </a>
+                        </p>
                     </div>
 
                 </div>
@@ -88,8 +92,8 @@
         <!-- Info -->
         <aside class="info">
             <div class="grid grid--table">
-                <div class="grid__row grid__row--table">
-                    <div class="grid__col grid__col--4 grid__col--table">
+                <div class="grid__row grid__row--table grid__row--md">
+                    <div class="grid__col grid__col--4 grid__col--md grid__col--table info__row">
                         <p class="info__block">
                             <span class="info__col">
                                 <span class="info__icon">
@@ -102,8 +106,8 @@
                             </span>
                         </p>
                     </div>
-                    <div class="grid__col grid__col--4 grid__col--table">
-                        <p class="info__block">
+                    <div class="grid__col grid__col--4 grid__col--md grid__col--table info__row">
+                        <address class="info__block">
                             <span class="info__col">
                                 <span class="info__icon">
                                     <i class="fa fa-home"></i>
@@ -113,9 +117,9 @@
                                 Friedrichstraße 15a<br/>
                                 31737 Rinteln
                             </span>
-                        </p>
+                        </address>
                     </div>
-                    <div class="grid__col grid__col--4 grid__col--table">
+                    <div class="grid__col grid__col--4 grid__col--md grid__col--table info__row">
                         <p class="info__block">
                             <span class="info__col">
                                 <span class="info__icon">
@@ -123,8 +127,8 @@
                                 </span>
                             </span>
                             <span class="info__col">
-                                0151 6816 2501<br/>
-                                jakob.me@gmail.com
+                                <a href="tel:+49 151 6816 2501">0151 6816 2501</a><br/>
+                                <a href="mailto:jakob.me@gmail.com">jakob.me@gmail.com</a>
                             </span>
                         </p>
                     </div>
@@ -134,12 +138,12 @@
 
         <!-- Content -->
         <main class="content">
-            <div class="grid">
+            <article class="grid">
 
                 <!-- Lebenslauf -->
-                <div class="grid__row">
+                <section class="grid__row content__section">
                     <div class="grid__col grid__col--12">
-                        <article class="content__extend">
+                        <div class="content__extend">
 
                             <!-- Lebenslauf -->
                             <h2 class="title" id="lebenslauf">
@@ -150,8 +154,8 @@
                             </h2>
 
                             <!-- Ausbildung -->
-                            <section class="content__section">
-                                <h3 class="title title--secondary title--arrow" id="ausbildung">
+                            <section class="content__box">
+                                <h3 class="title title--secondary title--arrow title--border" id="ausbildung">
                                     <span class="title__icon">
                                         <i class="fa fa-graduation-cap"></i>
                                     </span>
@@ -193,8 +197,8 @@
                             </section>
 
                             <!-- Berufserfahrung -->
-                            <section class="content__section">
-                                <h3 class="title title--secondary title--arrow" id="berufserfahrung">
+                            <section class="content__box">
+                                <h3 class="title title--secondary title--arrow title--border" id="berufserfahrung">
                                     <span class="title__icon">
                                         <i class="fa fa-briefcase"></i>
                                     </span>
@@ -217,8 +221,8 @@
                             </section>
 
                             <!-- Sonstiges -->
-                            <section class="content__section">
-                                <h3 class="title title--secondary title--arrow" id="sonstiges">
+                            <section class="content__box content__box--last">
+                                <h3 class="title title--secondary title--arrow title--border" id="sonstiges">
                                     <span class="title__icon">
                                         <i class="fa fa-cog"></i>
                                     </span>
@@ -238,16 +242,16 @@
                                 </ul>
                             </section>
 
-                        </article>
+                        </div>
                     </div>
-                </div>
+                </section>
 
                 <!-- Kenntnisse -->
-                <div class="grid__row">
+                <section class="grid__row content__section">
 
                     <!-- Kenntnisse -->
                     <div class="grid__col grid__col--4 grid__col--md">
-                        <aside class="content__extend">
+                        <div class="content__extend">
                             <h4 class="title title--tertiary" id="kenntnisse">
                                 <span class="title__icon">
                                     <i class="fa fa-lightbulb-o"></i>
@@ -270,12 +274,12 @@
                                 <li class="badges__item">Bootstrap</li>
                                 <li class="badges__item">Photoshop</li>
                             </ul>
-                        </aside>
+                        </div>
                     </div>
 
                     <!-- Hobbies -->
                     <div class="grid__col grid__col--4 grid__col--md">
-                        <aside class="content__extend">
+                        <div class="content__extend">
                             <h4 class="title title--tertiary" id="hobbies">
                                 <span class="title__icon">
                                     <i class="fa fa-coffee"></i>
@@ -283,17 +287,17 @@
                                 <span class="title__text">Hobbies</span>
                             </h4>
                             <ul class="badges content__indent">
-                                <li class="badges__item">Pen &amp; Paper Rollenspiele</li>
                                 <li class="badges__item">Lesen</li>
                                 <li class="badges__item">Coden</li>
                                 <li class="badges__item">Videospiele</li>
+                                <li class="badges__item">Pen &amp; Paper Rollenspiele</li>
                             </ul>
-                        </aside>
+                        </div>
                     </div>
 
                     <!-- Sprachen -->
                     <div class="grid__col grid__col--4 grid__col--md">
-                        <aside class="content__extend">
+                        <div class="content__extend">
                             <h4 class="title title--tertiary" id="sprachen">
                                 <span class="title__icon">
                                     <i class="fa fa-comments"></i>
@@ -304,12 +308,34 @@
                                 <li class="badges__item">Deutsch, Muttersprache</li>
                                 <li class="badges__item">Englisch, fließend</li>
                             </ul>
-                        </aside>
+                        </div>
                     </div>
 
-                </div>
+                </section>
 
-            </div>
+                <!-- Zeugnisse -->
+                <section class="grid__row content__section">
+                    <div class="grid__col grid__col--12">
+                        <div class="content__extend content__box">
+                            <h2 class="title title--border title--arrow" id="zeugnisse">
+                                <span class="title__icon">
+                                    <i class="fa fa-trophy"></i>
+                                </span>
+                                <span class="title__text">Zeugnisse</span>
+                            </h2>
+                            <ul class="tablelist">
+                                <li class="tablelist__row">
+                                    <p class="tablelist__col">
+                                    </p>
+                                    <p class="tablelist__col">
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+            </article>
         </main>
 
     </body>

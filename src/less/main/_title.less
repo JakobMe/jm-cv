@@ -69,10 +69,6 @@
     // Secondary
     &&--secondary {
         color: @color-text-dark;
-        padding-top: @gap-small;
-        padding-bottom: @gap-small;
-        margin-bottom: @gap-medium;
-        border-bottom: @gap-micro solid @color-pale;
     }
 
     // Secondary & Icon
@@ -115,10 +111,23 @@
         }
     }
 
-    // Arrow
+    // Mit Rahmen
+    &&--border {
+        padding-top: @gap-medium;
+        padding-bottom: @gap-medium;
+        margin-bottom: @gap-medium;
+        border-bottom: @gap-micro solid @color-pale;
+
+        // Responsive
+        @media @responsive-small {
+            padding-top: @gap-small;
+            padding-bottom: @gap-small;
+        }
+    }
+
+    // Mit Pfeil
     &&--arrow {
         position: relative;
-        padding-bottom: @gap-small;
 
         // After & Before
         &:after, &:before {

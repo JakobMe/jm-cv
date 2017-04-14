@@ -9,13 +9,9 @@
 // Info
 .info {
     background: @color-primary;
-    padding: @gap-large 0;
-    .shadow-inner-bottom(25%);
+    color: @color-text-light;
+    .shadow-inner-bottom();
     .shadow-text(10%);
-
-    // Farbe & Links
-    &, a { color: @color-text-light; }
-    a { text-decoration: none; }
 
     // Responsive
     @media @responsive-medium {
@@ -27,13 +23,45 @@
         padding: @gap-medium 0;
     }
 
+    // Links
+    a {
+        color: inherit;
+        text-decoration: none;
+        .transition(color);
+
+        // Hover
+        &:hover {
+            color: fade(@color-text-light, 70%);
+        }
+    }
+
     // Block
     &__block {
         text-align: left;
         margin: 0;
-        padding: 0;
         line-height: 1.3;
+        padding: @gap-large 0;
         font-size: @font-size-big;
+        white-space: nowrap;
+
+        // Responsive
+        @media @responsive-medium {
+            padding: 0;
+        }
+    }
+
+    // Zeile
+    &__row {
+
+        // Responsive
+        @media @responsive-medium {
+
+            // Rahmen & Abstand
+            &:not(:last-child) {
+                padding-bottom: @gap-medium;
+                border-bottom: @gap-micro dotted fade(@color-shadow, 10%);
+            }
+        }
     }
 
     // Spalte

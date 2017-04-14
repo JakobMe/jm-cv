@@ -8,32 +8,40 @@
 
 // Content
 .content {
-    padding: @gap-large 0;
+    z-index: 1500;
+    position: relative;
     background: @color-content;
-
-    // Responsive
-    @media @responsive-medium {
-        padding: @gap-big 0;
-    }
-
-    // Responsive
-    @media @responsive-small {
-        padding: @gap-medium 0;
-    }
 
     // Abschnitt
     &__section {
-        border-top: @gap-micro solid @color-pale;
+        padding-top: @gap-large;
 
         // Letzter Abschnitt
-        &:last-child {
-            margin-bottom: @gap-big;
-            border-bottom: @gap-micro solid @color-pale;
+        &:last-child { padding-bottom: @gap-large; }
 
-            // Responsive
-            @media @responsive-small {
-                margin-bottom: @gap-medium;
-            }
+        // Responsive
+        @media @responsive-medium {
+            padding-top: @gap-big;
+
+            // Letzter Abschnitt
+            &:last-child { padding-bottom: @gap-big; }
+        }
+
+        // Responsive
+        @media @responsive-small {
+
+            // Letzter Abschnitt
+            &:last-child { padding-bottom: 0; }
+        }
+    }
+
+    // Box
+    &__box {
+        border-top: @gap-micro solid @color-pale;
+
+        // Letzte Box
+        &&--last {
+            border-bottom: @gap-micro solid @color-pale;
         }
     }
 

@@ -6,40 +6,51 @@
  * @license MIT
  */
 
- // Titel
- em {
-     font-weight: @font-weight-bold;
-     margin: 0;
-     padding: 0;
-     font-style: normal;
-     text-transform: uppercase;
-     color: @color-primary;
- }
+// Titel
+em {
+    font-weight: @font-weight-bold;
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+    text-transform: uppercase;
+    color: @color-primary;
+}
 
- // Fett
- strong {
-     font-weight: @font-weight-bold;
- }
+// Fett
+strong {
+    font-weight: @font-weight-bold;
+}
 
- // Untertitel
- u {
-     text-decoration: none;
-     color: darken(@color-pale, 5%);
- }
+// Untertitel
+u {
+    text-decoration: none;
+    color: darken(@color-pale, 5%);
+}
 
- // Markierung
- mark {
-     display: inline;
-     font-size: @font-size-small;
-     white-space: nowrap;
-     padding: @gap-micro @gap-small;
-     vertical-align: 3px;
-     color: darken(@color-highlight, 40%);
-     background: @color-highlight;
-     border-radius: @gap-medium;
+// Telefon & E-Mail
+a[href^="tel:"], a[href^="mailto:"] {
+    color: inherit;
+    text-decoration: none;
+}
 
-     // Responsive
-     @media @responsive-small {
-         vertical-align: 1.5px;
-     }
- }
+// Adresse
+address {
+    font-style: normal;
+}
+
+// Markierung
+mark {
+    display: inline;
+    font-size: @font-size-small;
+    white-space: nowrap;
+    padding: @gap-micro @gap-small;
+    vertical-align: 3px;
+    color: darken(@color-highlight, 40%);
+    background: @color-highlight;
+    border-radius: @gap-medium;
+
+    // Responsive
+    @media @responsive-small {
+        vertical-align: 1.5px;
+    }
+}
