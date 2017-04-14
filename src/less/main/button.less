@@ -10,41 +10,56 @@
 .button {
     display: inline-block;
     box-sizing: content-box;
-    background: transparent;
     text-decoration: none;
     text-align: center;
+    overflow: hidden;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background: @color-text-dark;
     padding: @gap-small @gap-medium;
     border: @gap-micro solid @color-text-dark;
     height: @height-button;
     font-size: @font-size-medium;
     line-height: @height-button - @gap-micro;
     font-weight: @font-weight-bold;
-    color: @color-text-dark;
+    color: @color-text-light;
     border-radius: (@gap-big + @gap-small * 2 + @gap-micro * 2);
-    margin: 0 @gap-tiny;
+    .shadow-drop(5%);
+    .shadow-text-flat();
     .transition();
-
-    // Abstand
-    &:not(:last-child) { margin-bottom: @gap-small; }
-
-    // Responsive
-    @media @responsive-small {
-        display: block;
-        margin: 0;
-
-        // Abstand
-        &:not(:last-child) {
-            margin: 0 0 @gap-medium 0;
-        }
-    }
 
     // Dark
     &&--dark {
         border-color: @color-text-light;
         color: @color-text-light;
         background: fade(@color-shadow, 25%);
-        .shadow-frame();
-        .shadow-text();
+        .shadow-text-flat();
+        .shadow-drop();
+
+        // Hover & Active
+        &:hover, &:active {
+            .shadow-drop(40%);
+        }
+    }
+
+    // Zentriert
+    &&--center {
+        margin: 0 @gap-tiny;
+
+        // Abstand
+        &:not(:last-child) { margin-bottom: @gap-small; }
+
+        // Responsive
+        @media @responsive-small {
+            display: block;
+            margin: 0;
+
+            // Abstand
+            &:not(:last-child) {
+                margin: 0 0 @gap-medium 0;
+            }
+        }
     }
 
     // Icon
@@ -56,8 +71,8 @@
     // Hover & Active
     &:hover, &:active {
         color: @color-text-light;
-        .shadow-flat();
-        .shadow-text(10%);
+        .shadow-text-flat(10%);
+        .shadow-drop(10%);
     }
 
     // Hover
