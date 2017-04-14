@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de" xmlns:fb="http://ogp.me/ns/fb#">
+<html lang="de" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#">
 
     <!-- Head -->
     <head>
@@ -86,7 +86,7 @@
         </header>
 
         <!-- Info -->
-        <section class="info">
+        <aside class="info">
             <div class="grid grid--table">
                 <div class="grid__row grid__row--table">
                     <div class="grid__col grid__col--4 grid__col--table">
@@ -130,48 +130,48 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </aside>
 
         <!-- Content -->
         <main class="content">
-            <article class="grid">
+            <div class="grid">
 
                 <!-- Lebenslauf -->
                 <div class="grid__row">
                     <div class="grid__col grid__col--12">
-                        <div class="content__extend">
-                            <h1 class="title" id="lebenslauf">
+                        <article class="content__extend">
+
+                            <!-- Lebenslauf -->
+                            <h2 class="title" id="lebenslauf">
                                 <span class="title__icon title__icon--pale">
                                     <i class="fa fa-address-book-o"></i>
                                 </span>
                                 <span class="title__text">Lebenslauf</span>
-                            </h1>
+                            </h2>
 
                             <!-- Ausbildung -->
                             <section class="content__section">
-                                <h2 class="title title--secondary title--arrow" id="ausbildung">
+                                <h3 class="title title--secondary title--arrow" id="ausbildung">
                                     <span class="title__icon">
                                         <i class="fa fa-graduation-cap"></i>
                                     </span>
                                     <span class="title__text">Ausbildung</span>
-                                </h2>
+                                </h3>
                                 <ul class="tablelist">
                                     <li class="tablelist__row">
                                         <p class="tablelist__col">
                                             <em>Gymnasium</em><br/>
-                                            <time datetime="2003-06-01">06/2003 -</time>
-                                            <time datetime="2010-06-01">05/2010</time>
+                                            <u>06/2003 &ndash; 05/2010</u>
                                         </p>
                                         <p class="tablelist__col">
                                             <strong>Gymnasium Ernestinum Rinteln</strong><br/>
-                                            Abitur/Allgemeine Hochschulreife <mark>1,3</mark>
+                                            Abitur/Allgemeine Hochschulreife <mark>Note 1,3</mark>
                                         </p>
                                     </li>
                                     <li class="tablelist__row">
                                         <p class="tablelist__col">
                                             <em>Studium</em><br/>
-                                            <time datetime="2011-10-01">10/2011 -</time>
-                                            <time datetime="2012-10-01">09/2012</time>
+                                            <u>10/2011 &ndash; 09/2012</u>
                                         </p>
                                         <p class="tablelist__col">
                                             <strong>Universität Bielefeld</strong><br/>
@@ -181,13 +181,12 @@
                                     <li class="tablelist__row">
                                         <p class="tablelist__col">
                                             <em>Studium</em><br/>
-                                            <time datetime="2012-10-01">10/2012 -</time>
-                                            <time datetime="2017-04-01">03/2017</time>
+                                            <u>10/2012 &ndash; 03/2017</u>
                                         </p>
                                         <p class="tablelist__col">
                                             <strong>Universität Bielefeld</strong><br/>
                                             Medieninformatik &amp; Gestaltung,
-                                            B. Sc. <mark>1,4</mark>
+                                            B. Sc. <mark>Note 1,4</mark>
                                         </p>
                                     </li>
                                 </ul>
@@ -195,18 +194,17 @@
 
                             <!-- Berufserfahrung -->
                             <section class="content__section">
-                                <h2 class="title title--secondary title--arrow" id="berufserfahrung">
+                                <h3 class="title title--secondary title--arrow" id="berufserfahrung">
                                     <span class="title__icon">
                                         <i class="fa fa-briefcase"></i>
                                     </span>
                                     <span class="title__text">Berufserfahrung</span>
-                                </h2>
+                                </h3>
                                 <ul class="tablelist">
                                     <li class="tablelist__row">
                                         <p class="tablelist__col">
                                             <em>Web-Entwickler</em><br/>
-                                            <time datetime="2009-01-01">01/2009 -</time>
-                                            <time datetime="2017-05-01">04/2017</time>
+                                            <u>01/2009 &ndash; 04/2017</u>
                                         </p>
                                         <p class="tablelist__col">
                                             <strong>SPIELER Internet, Kathrinhagen</strong><br/>
@@ -220,18 +218,17 @@
 
                             <!-- Sonstiges -->
                             <section class="content__section">
-                                <h2 class="title title--secondary title--arrow" id="sonstiges">
+                                <h3 class="title title--secondary title--arrow" id="sonstiges">
                                     <span class="title__icon">
                                         <i class="fa fa-cog"></i>
                                     </span>
                                     <span class="title__text">Sonstiges</span>
-                                </h2>
+                                </h3>
                                 <ul class="tablelist">
                                     <li class="tablelist__row">
                                         <p class="tablelist__col">
                                             <em>Zivildienst</em><br/>
-                                            <time datetime="2010-06-01">06/2010 -</time>
-                                            <time datetime="2011-01-01">12/2010</time>
+                                            <u>06/2010 &ndash; 12/2010</u>
                                         </p>
                                         <p class="tablelist__col">
                                             <strong>Kreiskrankenhaus Rinteln</strong><br/>
@@ -241,7 +238,7 @@
                                 </ul>
                             </section>
 
-                        </div>
+                        </article>
                     </div>
                 </div>
 
@@ -251,12 +248,12 @@
                     <!-- Kenntnisse -->
                     <div class="grid__col grid__col--4 grid__col--md">
                         <aside class="content__extend">
-                            <h3 class="title title--tertiary" id="kenntnisse">
+                            <h4 class="title title--tertiary" id="kenntnisse">
                                 <span class="title__icon">
                                     <i class="fa fa-lightbulb-o"></i>
                                 </span>
                                 <span class="title__text">Kenntnisse</span>
-                            </h3>
+                            </h4>
                             <ul class="badges content__indent">
                                 <li class="badges__item">HTML</li>
                                 <li class="badges__item">CSS/LESS</li>
@@ -279,12 +276,12 @@
                     <!-- Hobbies -->
                     <div class="grid__col grid__col--4 grid__col--md">
                         <aside class="content__extend">
-                            <h3 class="title title--tertiary" id="hobbies">
+                            <h4 class="title title--tertiary" id="hobbies">
                                 <span class="title__icon">
                                     <i class="fa fa-coffee"></i>
                                 </span>
                                 <span class="title__text">Hobbies</span>
-                            </h3>
+                            </h4>
                             <ul class="badges content__indent">
                                 <li class="badges__item">Pen &amp; Paper Rollenspiele</li>
                                 <li class="badges__item">Lesen</li>
@@ -297,12 +294,12 @@
                     <!-- Sprachen -->
                     <div class="grid__col grid__col--4 grid__col--md">
                         <aside class="content__extend">
-                            <h3 class="title title--tertiary" id="sprachen">
+                            <h4 class="title title--tertiary" id="sprachen">
                                 <span class="title__icon">
                                     <i class="fa fa-comments"></i>
                                 </span>
                                 <span class="title__text">Sprachen</span>
-                            </h3>
+                            </h4>
                             <ul class="badges content__indent">
                                 <li class="badges__item">Deutsch, Muttersprache</li>
                                 <li class="badges__item">Englisch, fließend</li>
@@ -312,7 +309,7 @@
 
                 </div>
 
-            </article>
+            </div>
         </main>
 
     </body>

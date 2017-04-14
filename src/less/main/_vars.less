@@ -17,15 +17,14 @@
 @color-text-light:             #ffffff;
 @color-shadow:                 #000000;
 
-// Breiten
-@width-grid:                   1024px;
+// Größen
 @width-background:             1280px;
-@width-mobile:                 512px;
-@width-desktop:                513px;
-@width-tablet:                 768px;
-
-// Höhen
+@width-grid:                   1024px;
 @height-button:                24px;
+
+// Breakpoints
+@breakpoint-small:             512px;
+@breakpoint-medium:            768px;
 
 // Abstände
 @gap-medium:                   16px;
@@ -63,8 +62,6 @@
 @path-content:                 "../img/content/";
 
 // Media-Queries
-@responsive-mobile:            ~"(max-width: @{width-mobile})";
-@responsive-desktop:           ~"(min-width: @{width-desktop})";
-@responsive-grid:              ~"(max-width: @{width-grid})";
-@responsive-tablet:            ~"(max-width: @{width-tablet})";
+@responsive-small:             ~"(max-width: @{breakpoint-small})";
+@responsive-medium:            ~"(max-width: @{breakpoint-medium})";
 @responsive-retina:            ~"(-webkit-min-device-pixel-ratio: 2), (min-resolution: 144dpi)";

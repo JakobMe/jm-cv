@@ -10,7 +10,7 @@
 .header {
     overflow: hidden;
     background: transparent;
-    padding: 5vw 0;
+    padding: @gap-large 0;
     line-height: 1;
     text-align: center;
     color: @color-text-light;
@@ -19,7 +19,12 @@
     .shadow-text();
 
     // Responsive
-    @media @responsive-mobile {
+    @media @responsive-medium {
+        padding: @gap-big 0;
+    }
+
+    // Responsive
+    @media @responsive-small {
         padding: @gap-medium 0;
     }
 

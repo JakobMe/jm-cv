@@ -9,7 +9,7 @@
 // Info
 .info {
     background: @color-primary;
-    padding: 2.5vw 0;
+    padding: @gap-large 0;
     .shadow-inner-bottom(25%);
     .shadow-text(10%);
 
@@ -18,7 +18,12 @@
     a { text-decoration: none; }
 
     // Responsive
-    @media @responsive-mobile {
+    @media @responsive-medium {
+        padding: @gap-big 0;
+    }
+
+    // Responsive
+    @media @responsive-small {
         padding: @gap-medium 0;
     }
 

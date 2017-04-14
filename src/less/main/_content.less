@@ -8,11 +8,16 @@
 
 // Content
 .content {
-    padding: @gap-big 0;
+    padding: @gap-large 0;
     background: @color-content;
 
     // Responsive
-    @media @responsive-mobile {
+    @media @responsive-medium {
+        padding: @gap-big 0;
+    }
+
+    // Responsive
+    @media @responsive-small {
         padding: @gap-medium 0;
     }
 
@@ -26,7 +31,7 @@
             border-bottom: @gap-micro solid @color-pale;
 
             // Responsive
-            @media @responsive-mobile {
+            @media @responsive-small {
                 margin-bottom: @gap-medium;
             }
         }
