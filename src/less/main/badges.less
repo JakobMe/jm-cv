@@ -18,14 +18,8 @@
 
     // Print
     @media @print {
-        border-left-style: solid;
-        border-left-width: @width-line-print;
-        padding-left: (@gap-big / 2) + @gap-small;
-        padding-top: 0;
-        padding-bottom: 0;
-        padding-right: 0;
-        margin-top: 0;
-        margin-left: @gap-small + (@gap-big / 2) - (@width-line-print / 2);
+        padding: 0 0 0 ((@gap-big / 2) + @gap-small );
+        margin: 0 0 0 (@gap-small + (@gap-big / 2) - (@width-line-print / 2));
     }
 
     // Element: Item

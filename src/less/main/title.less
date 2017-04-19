@@ -49,6 +49,7 @@
             line-height: @gap-big;
             margin-right: @gap-small;
             font-size: @font-size-large;
+            background: transparent !important;
 
             // Font-Awesome Icon
             .fa { vertical-align: 0; }
@@ -108,11 +109,6 @@
     // Mod: Sekundär-Titel & Element: Icon
     &&--secondary  &__icon {
         background: @color-text-dark;
-
-        // Print
-        @media @print {
-            background: transparent;
-        }
     }
 
     // Mod: Sekundär-Titel & Element: Text
@@ -127,7 +123,6 @@
 
         // Print
         @media @print {
-            color: @color-primary;
             font-size: @font-size-large;
         }
     }
@@ -143,22 +138,12 @@
         color: @color-text-dark;
         background: @color-pale;
         text-shadow: none;
-
-        // Print
-        @media @print {
-            background: transparent;
-        }
     }
 
     // Mod: Tertiär-Titel & Element: Text
     &&--tertiary  &__text {
         text-transform: none;
         font-size: @font-size-large;
-
-        // Print
-        @media @print {
-            color: @color-primary;
-        }
     }
 
     // Mod: Titel mit Rahmen
@@ -169,9 +154,6 @@
 
         // Print
         @media @print {
-            border-top: solid;
-            border-top-color: @color-pale;
-            border-width: @width-line-print;
             padding-top: @gap-small;
             padding-bottom: @gap-small;
         }
