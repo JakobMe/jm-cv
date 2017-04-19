@@ -15,11 +15,21 @@
     // Element: Rahmen Oben
     &__border-top {
         border-top: @gap-micro solid @color-pale;
+
+        // Print
+        @media @print {
+            border: none;
+        }
     }
 
     // Element: Rahmen Unten
     &__border-bottom {
         border-bottom: @gap-micro solid @color-pale;
+
+        // Print
+        @media @print {
+            border-width: @width-line-print;
+        }
     }
 
     // Element: Trenner
@@ -68,6 +78,15 @@
         // Responsive
         @media @responsive-small {
             height: @gap-medium;
+        }
+
+        // Print
+        @media @print {
+            background: transparent;
+            height: @gap-big;
+
+            // Verlauf entfernen
+            &:before, &:after { display: none; }
         }
     }
 }

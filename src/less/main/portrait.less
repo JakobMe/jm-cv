@@ -32,6 +32,11 @@
         background-size: cover;
         border-radius: 50%;
         .shadow-drop();
+
+        // Print
+        @media @print {
+            box-shadow: none;
+        }
     }
 
     // Element: Rahmen
@@ -48,6 +53,12 @@
         background: @color-shadow;
         border-radius: 50%;
         .shadow-drop();
+
+        // Print
+        @media @print {
+            border-color: @color-shadow;
+            box-shadow: none;
+        }
     }
 
     // Element: Bild

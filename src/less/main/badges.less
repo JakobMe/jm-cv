@@ -16,6 +16,18 @@
     padding-left: @gap-big + @gap-small;
     margin: -(@gap-tiny) 0 0 @gap-big + @gap-small - (@gap-micro / 2);
 
+    // Print
+    @media @print {
+        border-left-style: solid;
+        border-left-width: @width-line-print;
+        padding-left: (@gap-big / 2) + @gap-small;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-right: 0;
+        margin-top: 0;
+        margin-left: @gap-small + (@gap-big / 2) - (@width-line-print / 2);
+    }
+
     // Element: Item
     &__item {
         max-width: 100%;
@@ -32,5 +44,16 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+
+        // Print
+        @media @print {
+            height: auto;
+            line-height: 1.5;
+            font-style: italic;
+            padding: 0 (@gap-tiny + @gap-micro);
+            font-size: @font-size-medium;
+            background: @color-light;
+            border-radius: @gap-micro;
+        }
     }
 }

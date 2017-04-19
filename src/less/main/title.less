@@ -16,12 +16,17 @@
     color: @color-primary;
     font-weight: @font-weight-normal;
 
+    // Print
+    @media @print {
+        padding: 0 @gap-small;
+    }
+
     // Element: Icon
     &__icon {
         display: inline-block;
         text-align: center;
         position: relative;
-        z-index: 100;
+        z-index: 150;
         margin: 0 @gap-medium 0 0;
         background: @color-primary;
         color: @color-text-light;
@@ -35,6 +40,19 @@
 
         // Font-Awesome Icon
         .fa { vertical-align: @gap-hairline; }
+
+        // Print
+        @media @print {
+            text-shadow: none;
+            width: @gap-big;
+            height: @gap-big;
+            line-height: @gap-big;
+            margin-right: @gap-small;
+            font-size: @font-size-large;
+
+            // Font-Awesome Icon
+            .fa { vertical-align: 0; }
+        }
     }
 
     // Element: Text
@@ -43,7 +61,8 @@
         display: inline-block;
         box-sizing: border-box;
         left: 0;
-        width: 100%;
+        width: auto;
+        max-width: 100%;
         z-index: 100;
         padding: 0 @gap-medium 0 (@gap-large + @gap-medium * 2);
         text-transform: uppercase;
@@ -54,11 +73,31 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        background: @color-content;
 
         // Responsive
         @media @responsive-small {
             font-size: @font-size-huge;
         }
+
+        // Print
+        @media @print {
+            line-height: @gap-big;
+            padding-left: (@gap-big + @gap-small * 2);
+        }
+    }
+
+    // Element: Linie
+    &__line {
+        content: "";
+        display: block;
+        position: absolute;
+        height: @gap-micro;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        z-index: 50;
+        background: @color-light;
     }
 
     // Mod: Sekundär-Titel
@@ -69,6 +108,11 @@
     // Mod: Sekundär-Titel & Element: Icon
     &&--secondary  &__icon {
         background: @color-text-dark;
+
+        // Print
+        @media @print {
+            background: transparent;
+        }
     }
 
     // Mod: Sekundär-Titel & Element: Text
@@ -79,6 +123,12 @@
         // Responsive
         @media @responsive-small {
             font-size: @font-size-larger;
+        }
+
+        // Print
+        @media @print {
+            color: @color-primary;
+            font-size: @font-size-large;
         }
     }
 
@@ -93,12 +143,22 @@
         color: @color-text-dark;
         background: @color-pale;
         text-shadow: none;
+
+        // Print
+        @media @print {
+            background: transparent;
+        }
     }
 
     // Mod: Tertiär-Titel & Element: Text
     &&--tertiary  &__text {
         text-transform: none;
         font-size: @font-size-large;
+
+        // Print
+        @media @print {
+            color: @color-primary;
+        }
     }
 
     // Mod: Titel mit Rahmen
@@ -106,6 +166,15 @@
         padding-top: @gap-medium;
         padding-bottom: @gap-medium;
         border-bottom: @gap-micro solid @color-pale;
+
+        // Print
+        @media @print {
+            border-top: solid;
+            border-top-color: @color-pale;
+            border-width: @width-line-print;
+            padding-top: @gap-small;
+            padding-bottom: @gap-small;
+        }
     }
 
     // Mod: Auf dunkler Fläche
@@ -118,18 +187,25 @@
         text-shadow: none;
         background: @color-text-light;
         color: @color-text-dark;
-        .shadow-flat();
+        .shadow-drop();
     }
 
     // Mod: Auf dunkler Fläche & Element: Text
     &&--on-dark &__text {
-        .shadow-text-flat();
+        overflow: visible;
+        background: transparent;
+        .shadow-text-drop();
     }
 
     // Mod: Titel mit Pfeil
     &&--arrow {
         position: relative;
         margin-bottom: @gap-medium;
+
+        // Print
+        @media @print {
+            margin-bottom: 0;
+        }
 
         // Dreieck
         &:after, &:before {
@@ -141,6 +217,11 @@
             width: 0;
             position: absolute;
             pointer-events: none;
+
+            // Print
+            @media @print {
+                display: none;
+            }
         }
 
         // Dreieck

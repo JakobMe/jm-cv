@@ -28,12 +28,24 @@
         padding: @gap-medium 0;
     }
 
+    // Print
+    @media @print {
+        box-shadow: none;
+        text-shadow: none;
+        padding: 0 0 0.7cm 0;
+    }
+
     // Element: Titel
     &__title {
         font-weight: @font-weight-bold;
         font-size: @font-size-giant;
         text-transform: uppercase;
         margin: @gap-small 0 @gap-medium 0;
+
+        // Print
+        @media @print {
+            color: @color-primary;
+        }
     }
 
     // Element: Untertitel
@@ -42,6 +54,11 @@
         font-weight: @font-weight-normal;
         font-size: @font-size-huge;
         margin: 0 0 @gap-big 0;
+
+        // Print
+        @media @print {
+            margin-bottom: 0;
+        }
     }
 
     // Element: Button-Container

@@ -22,6 +22,16 @@
         display: block;
     }
 
+    // Print
+    @media @print {
+        border-left-style: solid;
+        border-left-width: @width-line-print;
+        margin-left: @gap-small + (@gap-big / 2) - (@width-line-print / 2);
+        padding: @gap-small 0;
+        padding-top: 0;
+        padding-left: @gap-small;
+    }
+
     // Element: Zeile
     &__row {
         display: table-row;
@@ -50,13 +60,24 @@
             &:not(:first-child) { padding-top: 0; }
         }
 
+        // Print
+        @media @print {
+            padding: @gap-small @gap-medium;
+        }
+
         // Erste Spalte
         &:first-child {
-            min-width: 25.5vw;
+            min-width: (100vw / 3);
+            max-width: ((@width-grid - @gap-huge) / 3) + @gap-small;
 
             // Responsive
             @media @responsive-small {
                 width: auto;
+            }
+
+            // Print
+            @media @print {
+                min-width: 5.5cm;
             }
 
             // Kreis Links
@@ -74,6 +95,16 @@
                 margin-left: -(@gap-micro / 2);
                 border: @gap-micro solid @color-pale;
                 transform: translate3d(-50%, -50%, 0);
+
+                // Print
+                @media @print {
+                    border: none;
+                    margin-left: -(@width-line-print / 2);
+                    border-width: @width-line-print;
+                    width: @gap-small;
+                    height: @gap-small;
+                    background: @color-light;
+                }
             }
         }
 
@@ -93,6 +124,11 @@
 
                 // Responsive
                 @media @responsive-small {
+                    display: none;
+                }
+
+                // Print
+                @media @print {
                     display: none;
                 }
             }

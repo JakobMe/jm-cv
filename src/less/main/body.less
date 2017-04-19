@@ -17,6 +17,11 @@ html {
     @media @responsive-small {
         font-size: @font-size-root * 0.875;
     }
+
+    // Print
+    @media @print {
+        font-size: @font-size-root-print;
+    }
 }
 
 // Block: Body
@@ -46,5 +51,12 @@ html {
     // Retina
     @media @responsive-retina {
         background-image: url("@{path-layout}background@2x.png");
+    }
+
+    // Print
+    @media @print {
+        color: @color-shadow;
+        background: @color-content;
+        padding: 0.5cm 1cm;
     }
 }

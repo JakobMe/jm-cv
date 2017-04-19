@@ -10,7 +10,6 @@
 .grid {
     clear: both;
     display: block;
-    overflow: hidden;
     box-sizing: border-box;
     width: 100%;
     margin: 0 auto;
@@ -73,9 +72,13 @@
     // Element: Spalte
     &__col {
         float: left;
-        overflow-x: auto;
         box-sizing: border-box;
         padding: 0 @gap-medium;
+
+        // Print
+        @media @print {
+            padding: 0 @gap-small;
+        }
 
         // Mod: Breite Spalte (ohne Innenabstand)
         &&--wide {

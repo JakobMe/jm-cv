@@ -14,6 +14,11 @@ em {
     font-style: normal;
     text-transform: uppercase;
     color: @color-primary;
+
+    // Print
+    @media @print {
+        text-transform: none;
+    }
 }
 
 // Fett
@@ -24,7 +29,7 @@ strong {
 // Untertitel
 u {
     text-decoration: none;
-    color: darken(@color-pale, 5%);
+    color: darken(@color-pale, 10%);
 }
 
 // Telefon & E-Mail
@@ -52,5 +57,30 @@ mark {
     // Responsive
     @media @responsive-small {
         vertical-align: 1.5px;
+    }
+
+    // Print
+    @media @print {
+        font-size: inherit;
+        vertical-align: baseline;
+        background: transparent;
+        padding: 0;
+        color: darken(@color-pale, 10%);
+
+        // Klammern
+        &:before { content: "("; }
+        &:after { content: ")"; }
+    }
+}
+
+// Print
+@media @print {
+
+    // Rahmen entfernen
+    * { border: none !important; }
+
+    // Schriftfarbe
+    *:not(mark):not(u):not(em):not(.header__title) {
+        color: @color-text-dark !important;
     }
 }

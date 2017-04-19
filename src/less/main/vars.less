@@ -21,6 +21,7 @@
 @width-background:             1280px;
 @width-grid:                   1024px;
 @height-button:                24px;
+@width-line-print:             1px;
 
 // Breakpoints
 @breakpoint-small:             512px;
@@ -40,6 +41,7 @@
 
 // Schriftgrößen
 @font-size-root:               16px;
+@font-size-root-print:         8pt;
 @font-size-medium:             1.00rem;
 @font-size-big:                1.25rem;
 @font-size-large:              1.50rem;
@@ -67,6 +69,8 @@
 @path-content:                 "../img/content/";
 
 // Media-Queries
-@responsive-small:             ~"(max-width: @{breakpoint-small})";
-@responsive-medium:            ~"(max-width: @{breakpoint-medium})";
-@responsive-retina:            ~"(-webkit-min-device-pixel-ratio: 2), (min-resolution: 144dpi)";
+@responsive-small:             ~"screen and (max-width: @{breakpoint-small})";
+@responsive-medium:            ~"screen and (max-width: @{breakpoint-medium})";
+@responsive-retina:            ~"screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 144dpi)";
+@screen:                       ~"screen";
+@print:                        ~"print";

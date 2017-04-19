@@ -13,6 +13,15 @@
     .shadow-inner-bottom();
     .shadow-text-flat(10%);
 
+    // Print
+    @media @print {
+        box-shadow: none;
+        text-shadow: none;
+        background: @color-light;
+        border-radius: @gap-micro;
+        margin-bottom: 0.3cm;
+    }
+
     // Links
     a {
         color: inherit;
@@ -36,6 +45,13 @@
 
         // Responsive
         @media @responsive-medium {
+            padding: @gap-medium 0;
+        }
+
+        // Print
+        @media @print {
+            font-style: italic;
+            font-size: @font-size-medium;
             padding: @gap-medium 0;
         }
     }
@@ -76,6 +92,17 @@
         text-shadow: none;
         color: @color-text-dark;
         .shadow-flat(10%);
+
+        // Print
+        @media @print {
+            box-shadow: none;
+            background: transparent;
+            width: @gap-big;
+            height: @gap-big;
+            line-height: @gap-big;
+            font-size: @font-size-large;
+            margin-right: @gap-small;
+        }
 
         // Font-Awesome Icon
         .fa { vertical-align: @gap-hairline; }
