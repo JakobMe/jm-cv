@@ -6,7 +6,7 @@
  * @license MIT
  */
 
-// Title
+// Block: Titel
 .title {
     position: relative;
     margin: 0;
@@ -16,7 +16,7 @@
     color: @color-primary;
     font-weight: @font-weight-normal;
 
-    // Icon
+    // Element: Icon
     &__icon {
         display: inline-block;
         text-align: center;
@@ -37,7 +37,7 @@
         .fa { vertical-align: @gap-hairline; }
     }
 
-    // Text
+    // Element: Text
     &__text {
         position: absolute;
         display: inline-block;
@@ -61,17 +61,17 @@
         }
     }
 
-    // Secondary
+    // Mod: Sekundär-Titel
     &&--secondary {
         color: @color-text-dark;
     }
 
-    // Secondary & Icon
+    // Mod: Sekundär-Titel & Element: Icon
     &&--secondary  &__icon {
         background: @color-text-dark;
     }
 
-    // Secondary & Text
+    // Mod: Sekundär-Titel & Element: Text
     &&--secondary  &__text {
         text-transform: none;
         font-size: @font-size-huge;
@@ -82,38 +82,56 @@
         }
     }
 
-    // Tertiary
+    // Mod: Tertiär-Titel
     &&--tertiary {
         color: @color-text-dark;
         margin-bottom: @gap-medium;
     }
 
-    // Tertiary & Icon
+    // Mod: Tertiär-Titel & Element: Icon
     &&--tertiary  &__icon {
         color: @color-text-dark;
         background: @color-pale;
         text-shadow: none;
     }
 
-    // Tertiary & Text
+    // Mod: Tertiär-Titel & Element: Text
     &&--tertiary  &__text {
         text-transform: none;
         font-size: @font-size-large;
     }
 
-    // Mit Rahmen
+    // Mod: Titel mit Rahmen
     &&--border {
         padding-top: @gap-medium;
         padding-bottom: @gap-medium;
         border-bottom: @gap-micro solid @color-pale;
     }
 
-    // Mit Pfeil
+    // Mod: Auf dunkler Fläche
+    &&--on-dark {
+        color: @color-text-light;
+    }
+
+    // Mod: Auf dunkler Fläche & Element: Icon
+    &&--on-dark &__icon {
+        text-shadow: none;
+        background: @color-text-light;
+        color: @color-text-dark;
+        .shadow-flat();
+    }
+
+    // Mod: Auf dunkler Fläche & Element: Text
+    &&--on-dark &__text {
+        .shadow-text-flat();
+    }
+
+    // Mod: Titel mit Pfeil
     &&--arrow {
         position: relative;
         margin-bottom: @gap-medium;
 
-        // After & Before
+        // Dreieck
         &:after, &:before {
             top: 100%;
             left: @gap-big + @gap-small;
@@ -125,7 +143,7 @@
             pointer-events: none;
         }
 
-        // After
+        // Dreieck
         &:after {
             border-color: fade(@color-pale, 0%);
             border-top-color: @color-content;
@@ -133,7 +151,7 @@
             margin-left: -(@gap-medium);
         }
 
-        // Before
+        // Dreieck
         &:before {
             border-color: fade(@color-pale, 0%);
             border-top-color: @color-pale;

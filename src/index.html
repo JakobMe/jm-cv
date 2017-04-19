@@ -12,7 +12,7 @@
         <meta property="og:title" content="Jakob Metzger" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="http://jmportfolio.de/bewerbung" />
-        <meta property="og:description" content="Online-Bewerbung als Frontend-Entwickler"/>
+        <meta property="og:description" content="Online-Bewerbung als Frontend-Entwickler" />
         <meta property="og:image" content="http://jmportfolio.de/bewerbung/img/layout/portrait@2x.png" />
 
         <!-- Favicons -->
@@ -22,14 +22,16 @@
         <link rel="manifest" href="img/favicon/manifest.json">
         <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#57b76e">
         <link rel="shortcut icon" href="img/favicon/favicon.ico">
+
+        <!-- Webapp -->
         <meta name="apple-mobile-web-app-title" content="JM">
         <meta name="application-name" content="JM">
         <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
         <meta name="theme-color" content="#ffffff">
 
         <!-- Webapp-Einstellungen -->
-        <meta name="format-detection" content="telephone=no, date=no">
         <meta name="apple-mobile-web-app-capable" content="no">
+        <meta name="format-detection" content="telephone=no, date=no">
         <meta name="viewport" content="width=device-width, height=device-height,
                                        initial-scale=1, user-scalable=no,
                                        minimum-scale=1, maximum-scale=1">
@@ -70,13 +72,13 @@
                             Frontend-Entwickler
                         </p>
                         <p class="header__buttons">
-                            <a class="button button--dark button--center" href="https://github.com/JakobMe"
+                                <a class="button button--on-dark button--center" href="https://github.com/JakobMe"
                                target="_blank" rel="nofollow noreferrer" title="Jakob Metzgers GitHub Profil">
                                 <i class="fa fa-github button__icon"></i>
                                 github.com/JakobMe
                             </a>
                             <br/>
-                            <a class="button button--dark button--center" href="mailto:jakob.me@gmail.com"
+                            <a class="button button--on-dark button--center" href="mailto:jakob.me@gmail.com"
                                title="Jakob Metzger eine E-Mail schreiben">
                                 <i class="fa fa-envelope button__icon"></i>
                                 jakob.me@gmail.com
@@ -145,110 +147,108 @@
 
                 <!-- Lebenslauf -->
                 <section class="grid__row content__border-top">
-                    <div class="grid__col grid__col--12">
-                        <div class="content__extend">
+                    <div class="grid__col grid__col--12 grid__col--wide">
 
-                            <!-- Lebenslauf -->
-                            <h2 class="title title--border" id="lebenslauf">
+                        <!-- Lebenslauf -->
+                        <h2 class="title title--border" id="lebenslauf">
+                            <span class="title__icon">
+                                <i class="fa fa-address-book-o"></i>
+                            </span>
+                            <span class="title__text">Lebenslauf</span>
+                        </h2>
+
+                        <!-- Trenner -->
+                        <div class="content__divider"></div>
+
+                        <!-- Ausbildung -->
+                        <section class="content__border-top">
+                            <h3 class="title title--secondary title--arrow title--border" id="ausbildung">
                                 <span class="title__icon">
-                                    <i class="fa fa-address-book-o"></i>
+                                    <i class="fa fa-graduation-cap"></i>
                                 </span>
-                                <span class="title__text">Lebenslauf</span>
-                            </h2>
+                                <span class="title__text">Ausbildung</span>
+                            </h3>
+                            <ul class="table-list">
+                                <li class="table-list__row">
+                                    <p class="table-list__col">
+                                        <em>Gymnasium</em><br/>
+                                        <u>06/2003 &ndash; 05/2010</u>
+                                    </p>
+                                    <p class="table-list__col">
+                                        <strong>Gymnasium Ernestinum Rinteln</strong><br/>
+                                        Abitur/Allgemeine Hochschulreife <mark>Note 1,3</mark>
+                                    </p>
+                                </li>
+                                <li class="table-list__row">
+                                    <p class="table-list__col">
+                                        <em>Studium</em><br/>
+                                        <u>10/2011 &ndash; 09/2012</u>
+                                    </p>
+                                    <p class="table-list__col">
+                                        <strong>Universität Bielefeld</strong><br/>
+                                        Molekularbiologie, ohne Abschluss
+                                    </p>
+                                </li>
+                                <li class="table-list__row">
+                                    <p class="table-list__col">
+                                        <em>Studium</em><br/>
+                                        <u>10/2012 &ndash; 03/2017</u>
+                                    </p>
+                                    <p class="table-list__col">
+                                        <strong>Universität Bielefeld</strong><br/>
+                                        Medieninformatik &amp; Gestaltung,
+                                        B. Sc. <mark>Note 1,4</mark>
+                                    </p>
+                                </li>
+                            </ul>
+                        </section>
 
-                            <!-- Trenner -->
-                            <div class="content__divider"></div>
+                        <!-- Berufserfahrung -->
+                        <section class="content__border-top">
+                            <h3 class="title title--secondary title--arrow title--border" id="berufserfahrung">
+                                <span class="title__icon">
+                                    <i class="fa fa-briefcase"></i>
+                                </span>
+                                <span class="title__text">Berufserfahrung</span>
+                            </h3>
+                            <ul class="table-list">
+                                <li class="table-list__row">
+                                    <p class="table-list__col">
+                                        <em>Web-Entwickler</em><br/>
+                                        <u>01/2009 &ndash; 04/2017</u>
+                                    </p>
+                                    <p class="table-list__col">
+                                        <strong>SPIELER Internet, Kathrinhagen</strong><br/>
+                                        Ferien- und Nebenjob; Back- und Frontend-Entwicklung
+                                        für firmeneigenes CMS (PHP, MySQL), Webdesign, Theme-Entwicklung
+                                        für WordPress
+                                    </p>
+                                </li>
+                            </ul>
+                        </section>
 
-                            <!-- Ausbildung -->
-                            <section class="content__border-top">
-                                <h3 class="title title--secondary title--arrow title--border" id="ausbildung">
-                                    <span class="title__icon">
-                                        <i class="fa fa-graduation-cap"></i>
-                                    </span>
-                                    <span class="title__text">Ausbildung</span>
-                                </h3>
-                                <ul class="table-list">
-                                    <li class="table-list__row">
-                                        <p class="table-list__col">
-                                            <em>Gymnasium</em><br/>
-                                            <u>06/2003 &ndash; 05/2010</u>
-                                        </p>
-                                        <p class="table-list__col">
-                                            <strong>Gymnasium Ernestinum Rinteln</strong><br/>
-                                            Abitur/Allgemeine Hochschulreife <mark>Note 1,3</mark>
-                                        </p>
-                                    </li>
-                                    <li class="table-list__row">
-                                        <p class="table-list__col">
-                                            <em>Studium</em><br/>
-                                            <u>10/2011 &ndash; 09/2012</u>
-                                        </p>
-                                        <p class="table-list__col">
-                                            <strong>Universität Bielefeld</strong><br/>
-                                            Molekularbiologie, ohne Abschluss
-                                        </p>
-                                    </li>
-                                    <li class="table-list__row">
-                                        <p class="table-list__col">
-                                            <em>Studium</em><br/>
-                                            <u>10/2012 &ndash; 03/2017</u>
-                                        </p>
-                                        <p class="table-list__col">
-                                            <strong>Universität Bielefeld</strong><br/>
-                                            Medieninformatik &amp; Gestaltung,
-                                            B. Sc. <mark>Note 1,4</mark>
-                                        </p>
-                                    </li>
-                                </ul>
-                            </section>
+                        <!-- Sonstiges -->
+                        <section class="content__border-top content__border-bottom">
+                            <h3 class="title title--secondary title--arrow title--border" id="sonstiges">
+                                <span class="title__icon">
+                                    <i class="fa fa-cog"></i>
+                                </span>
+                                <span class="title__text">Sonstiges</span>
+                            </h3>
+                            <ul class="table-list">
+                                <li class="table-list__row">
+                                    <p class="table-list__col">
+                                        <em>Zivildienst</em><br/>
+                                        <u>06/2010 &ndash; 12/2010</u>
+                                    </p>
+                                    <p class="table-list__col">
+                                        <strong>Kreiskrankenhaus Rinteln</strong><br/>
+                                        Hol- und Bringdienst
+                                    </p>
+                                </li>
+                            </ul>
+                        </section>
 
-                            <!-- Berufserfahrung -->
-                            <section class="content__border-top">
-                                <h3 class="title title--secondary title--arrow title--border" id="berufserfahrung">
-                                    <span class="title__icon">
-                                        <i class="fa fa-briefcase"></i>
-                                    </span>
-                                    <span class="title__text">Berufserfahrung</span>
-                                </h3>
-                                <ul class="table-list">
-                                    <li class="table-list__row">
-                                        <p class="table-list__col">
-                                            <em>Web-Entwickler</em><br/>
-                                            <u>01/2009 &ndash; 04/2017</u>
-                                        </p>
-                                        <p class="table-list__col">
-                                            <strong>SPIELER Internet, Kathrinhagen</strong><br/>
-                                            Ferien- und Nebenjob; Back- und Frontend-Entwicklung
-                                            für firmeneigenes CMS (PHP, MySQL), Webdesign, Theme-Entwicklung
-                                            für WordPress
-                                        </p>
-                                    </li>
-                                </ul>
-                            </section>
-
-                            <!-- Sonstiges -->
-                            <section class="content__border-top content__border-bottom">
-                                <h3 class="title title--secondary title--arrow title--border" id="sonstiges">
-                                    <span class="title__icon">
-                                        <i class="fa fa-cog"></i>
-                                    </span>
-                                    <span class="title__text">Sonstiges</span>
-                                </h3>
-                                <ul class="table-list">
-                                    <li class="table-list__row">
-                                        <p class="table-list__col">
-                                            <em>Zivildienst</em><br/>
-                                            <u>06/2010 &ndash; 12/2010</u>
-                                        </p>
-                                        <p class="table-list__col">
-                                            <strong>Kreiskrankenhaus Rinteln</strong><br/>
-                                            Hol- und Bringdienst
-                                        </p>
-                                    </li>
-                                </ul>
-                            </section>
-
-                        </div>
                     </div>
                 </section>
 
@@ -259,8 +259,8 @@
                 <section class="grid__row grid__row--flex grid__row--md content__border-bottom">
 
                     <!-- Kenntnisse -->
-                    <div class="grid__col grid__col--4 grid__col--flex grid__col--md">
-                        <div class="content__extend flex flex--md content__border-top">
+                    <div class="grid__col grid__col--4 grid__col--flex grid__col--md grid__col--wide">
+                        <div class="flex flex--md content__border-top">
                             <h4 class="title title--tertiary title--arrow title--border" id="kenntnisse">
                                 <span class="title__icon">
                                     <i class="fa fa-lightbulb-o"></i>
@@ -287,8 +287,8 @@
                     </div>
 
                     <!-- Hobbies -->
-                    <div class="grid__col grid__col--4 grid__col--flex grid__col--md">
-                        <div class="content__extend flex flex--md content__border-top">
+                    <div class="grid__col grid__col--4 grid__col--flex grid__col--md grid__col--wide">
+                        <div class="flex flex--md content__border-top">
                             <h4 class="title title--tertiary title--arrow title--border" id="hobbies">
                                 <span class="title__icon">
                                     <i class="fa fa-coffee"></i>
@@ -305,8 +305,8 @@
                     </div>
 
                     <!-- Sprachen -->
-                    <div class="grid__col grid__col--4 grid__col--flex grid__col--md">
-                        <div class="content__extend flex flex--md content__border-top">
+                    <div class="grid__col grid__col--4 grid__col--flex grid__col--md grid__col--wide">
+                        <div class="flex flex--md content__border-top">
                             <h4 class="title title--tertiary title--arrow title--border" id="sprachen">
                                 <span class="title__icon">
                                     <i class="fa fa-comments"></i>
@@ -327,8 +327,8 @@
 
                 <!-- Zeugnisse -->
                 <section class="grid__row">
-                    <div class="grid__col grid__col--12">
-                        <div class="content__extend content__border-top content__border-bottom">
+                    <div class="grid__col grid__col--12 grid__col--wide">
+                        <div class="content__border-top content__border-bottom">
                             <h2 class="title title--border title--arrow" id="zeugnisse">
                                 <span class="title__icon">
                                     <i class="fa fa-trophy"></i>
@@ -388,6 +388,25 @@
 
             </article>
         </main>
+
+        <!-- Referenzen -->
+        <section class="references">
+            <article class="grid">
+                <div class="grid__row">
+                    <div class="grid__col grid__col--12 grid__col--wide">
+
+                        <!-- Referenzen -->
+                        <h2 class="title title--on-dark" id="referenzen">
+                            <span class="title__icon">
+                                <i class="fa fa-code"></i>
+                            </span>
+                            <span class="title__text">Referenzen</span>
+                        </h2>
+
+                    </div>
+                </div>
+            </article>
+        </section>
 
     </body>
 

@@ -6,7 +6,7 @@
  * @license MIT
  */
 
-// Button
+// Block: Button
 .button {
     display: inline-block;
     box-sizing: content-box;
@@ -29,8 +29,8 @@
     .shadow-text-flat();
     .transition();
 
-    // Dark
-    &&--dark {
+    // Mod: Auf dunkler Fläche
+    &&--on-dark {
         border-color: @color-text-light;
         color: @color-text-light;
         background: fade(@color-shadow, 25%);
@@ -43,12 +43,12 @@
         }
     }
 
-    // Zentriert
+    // Mod: Zentriert
     &&--center {
         margin: 0 @gap-tiny;
         vertical-align: top;
 
-        // Abstand
+        // Abstand Unten
         &:not(:last-child) { margin-bottom: @gap-small; }
 
         // Responsive
@@ -56,14 +56,14 @@
             display: block;
             margin: 0;
 
-            // Abstand
+            // Abstand Unten
             &:not(:last-child) {
                 margin: 0 0 @gap-medium 0;
             }
         }
     }
 
-    // Icon
+    // Element: Icon
     &__icon {
         margin-right: @gap-tiny;
         font-weight: @font-weight-normal;

@@ -6,7 +6,7 @@
  * @license MIT
  */
 
-// Grid
+// Block: Grid
 .grid {
     clear: both;
     display: block;
@@ -16,7 +16,7 @@
     margin: 0 auto;
     max-width: @width-grid;
 
-    // Table
+    // Mod: Tabelle
     &&--table {
         -webkit-overflow-scrolling: touch;
         overflow-x: auto;
@@ -27,13 +27,13 @@
         }
     }
 
-    // Row
+    // Element: Zeile
     &__row {
         clear: both;
         display: block;
         width: 100%;
 
-        // Table
+        // Mod: Tabellen-Zeile
         &&--table {
             display: table;
 
@@ -43,7 +43,7 @@
             }
         }
 
-        // Flex
+        // Mod: Flexbox
         &&--flex {
             display: flex;
 
@@ -53,7 +53,7 @@
             }
         }
 
-        // Medium
+        // Mod: Medium Responsive
         &&--md {
 
             // Responsive
@@ -62,7 +62,7 @@
             }
         }
 
-        // Clear
+        // Clearfix
         &:after {
             clear: both;
             display: block;
@@ -70,13 +70,19 @@
         }
     }
 
-    // Col
+    // Element: Spalte
     &__col {
         float: left;
+        overflow-x: auto;
         box-sizing: border-box;
         padding: 0 @gap-medium;
 
-        // Table
+        // Mod: Breite Spalte (ohne Innenabstand)
+        &&--wide {
+            padding: 0;
+        }
+
+        // Mod: Tabellen-Spalte
         &&--table {
             float: none;
             display: table-cell;
@@ -88,7 +94,7 @@
             }
         }
 
-        // Flex
+        // Mod: Flexbox
         &&--flex {
             float: none;
             display: flex;
@@ -99,7 +105,7 @@
             }
         }
 
-        // Sizes
+        // Mods: Spaltenbreiten
         &&--1  { width: (1/12)  * 100%; }
         &&--2  { width: (2/12)  * 100%; }
         &&--3  { width: (3/12)  * 100%; }
@@ -113,7 +119,7 @@
         &&--11 { width: (11/12) * 100%; }
         &&--12 { width: (12/12) * 100%; }
 
-        // Medium
+        // Mod: Medium Responsive
         &&--md {
 
             // Responsive

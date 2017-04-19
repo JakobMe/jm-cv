@@ -6,29 +6,23 @@
  * @license MIT
  */
 
-// Content
+// Block: Content
 .content {
     z-index: 1500;
     position: relative;
     background: @color-content;
 
-    // Rahmen Oben
+    // Element: Rahmen Oben
     &__border-top {
         border-top: @gap-micro solid @color-pale;
     }
 
-    // Rahmen Unten
+    // Element: Rahmen Unten
     &__border-bottom {
         border-bottom: @gap-micro solid @color-pale;
     }
 
-    // Erweitern
-    &__extend {
-        overflow-x: auto;
-        margin: 0 -(@gap-medium);
-    }
-
-    // Trenner
+    // Element: Trenner
     &__divider {
         border: none;
         display: block;
