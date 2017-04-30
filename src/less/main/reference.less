@@ -1,0 +1,98 @@
+/*
+ * Reference-Datei.
+ * Definiert das Aussehen von Referenzen.
+ * @author Jakob Metzger <jakob.me@gmail.com>
+ * @copyright 2017 Jakob Metzger
+ * @license MIT
+ */
+
+// Block: Referenz
+.reference {
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+
+    // Abstand
+    &:not(:last-child) { margin-bottom: @gap-huge; }
+
+    // Element: Bild
+    &__image {
+        display: block;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: auto;
+        border-radius: @gap-small;
+        .shadow-drop();
+    }
+
+    // Element: Beschriftung
+    &__caption {
+        display: table;
+        width: 100%;
+        font-size: 0;
+        color: @color-text-light;
+        .shadow-text-flat();
+
+        // Responsive
+        @media @responsive-medium {
+            display: block;
+            padding-top: @gap-medium;
+        }
+    }
+
+    // Element: Spalte
+    &__col {
+        display: table-cell;
+        vertical-align: middle;
+        padding: @gap-medium 0 0 0;
+
+        // Abstände
+        &:not(:first-child) { padding-left: @gap-small; }
+        &:not(:last-child) { padding-right: @gap-small; }
+
+        // Erstes
+        &:last-child {
+            width: 40%;
+            text-align: right;
+
+            // Responsive
+            @media @responsive-medium {
+                width: auto;
+                text-align: inherit;
+            }
+        }
+
+        // Responsive
+        @media @responsive-medium {
+            display: block;
+            vertical-align: top;
+            padding: 0;
+
+            // Abstände
+            &:not(:first-child) { padding: 0; }
+            &:not(:last-child) { padding: 0; margin-bottom: @gap-medium; }
+        }
+    }
+
+    // Element: Titel
+    &__title {
+        display: inline-block;
+        color: @color-text-light;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: @font-size-large;
+        margin-bottom: @gap-small;
+    }
+
+    // Element: Text
+    &__text {
+        font-size: @font-size-medium;
+    }
+
+    // Element: Button
+    &__button {
+        &:not(:last-child) { margin-right: @gap-small; }
+    }
+}
