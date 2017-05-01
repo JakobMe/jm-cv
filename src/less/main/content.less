@@ -29,22 +29,8 @@
 
     // Mod: Dunkel
     &&--dark {
-        background-color: @color-background;
-        background-image: url("@{path-layout}background.png");
-        background-position: top center;
-        background-repeat: no-repeat;
-        background-size: @width-background auto;
+        background: transparent;
         .shadow-inner-top();
-
-        // Responsive
-        @media @responsive-small {
-            background-attachment: scroll;
-        }
-
-        // Retina
-        @media @responsive-retina {
-            background-image: url("@{path-layout}background@2x.png");
-        }
     }
 
     // Element: Rahmen Oben
