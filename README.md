@@ -1,3 +1,3 @@
 # Jakob Metzger Online Bewerbung
-Online-Bewerbung als Frontend-Entwickler
-jmportfolio.de/bewerbung
+Online-Bewerbung als Frontend-Entwickler  
+[jmportfolio.de/bewerbung](http://jmportfolio.de/bewerbung)
