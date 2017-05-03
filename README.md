@@ -1,2 +1,3 @@
-# jm-cv
-Bewerbungsunterlagen Jakob Metzger
+# Jakob Metzger Online Bewerbung
+Online-Bewerbung als Frontend-Entwickler
+jmportfolio.de/bewerbung
